@@ -1,12 +1,22 @@
 " Personal Setting
 filetype off
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
+
+" vundle setting
+set runtimepath+=~/.vim/vundle.git/
+call vundle#rc()
+
+Bundle "http://github.com/rstacruz/sparkup.git", {'rtp': 'vim/'}
+Bundle "http://github.com/gmarik/snipmate.vim.git"
+Bundle "surround.vim"
+Bundle "https://github.com/cschlueter/vim-wombat.git"
+" vundle setting ending
+
 filetype plugin indent on
 syntax on
 set history=300
 set autoread
 inoremap jj <ESC>
+colorscheme wombat256
 
 " Search 
 set ignorecase "Ignore case when searching
@@ -58,3 +68,4 @@ noremap <leader>nt :NERDTree<cr>
 
 " php setting
 noremap <C-P> :!php -l %<CR>
+
