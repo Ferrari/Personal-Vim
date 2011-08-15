@@ -5,10 +5,13 @@ filetype off
 set runtimepath+=~/.vim/vundle.git/
 call vundle#rc()
 
-Bundle "http://github.com/rstacruz/sparkup.git", {'rtp': 'vim/'}
-Bundle "http://github.com/gmarik/snipmate.vim.git"
+Bundle "rstacruz/sparkup.git", {'rtp': 'vim/'}
+Bundle "gmarik/snipmate.vim.git"
 Bundle "surround.vim"
-Bundle "https://github.com/cschlueter/vim-wombat.git"
+Bundle "cschlueter/vim-wombat.git"
+Bundle "scrooloose/nerdtree"
+Bundle "tomtom/tcomment_vim"
+Bundle "mileszs/ack.vim"
 " vundle setting ending
 
 filetype plugin indent on
