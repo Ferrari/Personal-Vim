@@ -12,6 +12,8 @@ Bundle "cschlueter/vim-wombat.git"
 Bundle "scrooloose/nerdtree"
 Bundle "tomtom/tcomment_vim"
 Bundle "mileszs/ack.vim"
+Bundle "jamescarr/snipmate-nodejs"
+Bundle "pangloss/vim-javascipt"
 " vundle setting ending
 
 filetype plugin indent on
@@ -66,7 +68,6 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " Leader mapping
-"noremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 noremap <leader>nt :NERDTree<cr>
 
 " php setting
