@@ -40,9 +40,9 @@ set t_vb=
 set tm=500
 
 " Coding format
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 set autoindent
 set smartindent
@@ -55,6 +55,7 @@ set modelines=0 "prevent security exploits in modelines
 set ttyfast
 set ruler
 set laststatus=2
+set foldmethod=marker
 
 " Snipmate
 ino <c-j> <c-r>=TriggerSnippet()<cr>
