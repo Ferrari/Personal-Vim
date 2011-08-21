@@ -14,6 +14,7 @@ Bundle "tomtom/tcomment_vim"
 Bundle "mileszs/ack.vim"
 Bundle "jamescarr/snipmate-nodejs"
 Bundle "pangloss/vim-javascipt"
+Bundle "digitaltoad/vim-jade"
 " vundle setting ending
 
 filetype plugin indent on
