@@ -13,8 +13,10 @@ Bundle "scrooloose/nerdtree"
 Bundle "tomtom/tcomment_vim"
 Bundle "mileszs/ack.vim"
 Bundle "jamescarr/snipmate-nodejs"
-Bundle "pangloss/vim-javascipt"
+Bundle "pangloss/vim-javascript"
 Bundle "digitaltoad/vim-jade"
+Bundle "kchmck/vim-coffee-script"
+Bundle "nathanaelkane/vim-indent-guides"
 " vundle setting ending
 
 filetype plugin indent on
@@ -44,10 +46,10 @@ set tm=500
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-set expandtab
 set autoindent
 set smartindent
 set wrap
+" set expandtab "There might have indent error in some language
 
 " editor setting
 "set number
