@@ -1,23 +1,30 @@
-" Personal Setting
-filetype off
+" ferrari personal vimrc
 
-" vundle setting
-set runtimepath+=~/.vim/vundle.git/
-call vundle#rc()
+" Environment {
+	" Basics {
+		set nocompatible
+		set background=dark
+	" }
 
+	" Setup Bundle Support {
+			set rtp+=~/.vim/bundle/vundle
+			call vundle#rc()
+	" }
+" }
+
+" Bundles {
 Bundle "rstacruz/sparkup.git", {'rtp': 'vim/'}
 Bundle "gmarik/snipmate.vim.git"
-Bundle "surround.vim"
-Bundle "cschlueter/vim-wombat.git"
+Bundle "tpope/vim-surround"
 Bundle "scrooloose/nerdtree"
 Bundle "tomtom/tcomment_vim"
 Bundle "mileszs/ack.vim"
 Bundle "jamescarr/snipmate-nodejs"
-Bundle "pangloss/vim-javascript"
-Bundle "digitaltoad/vim-jade"
-Bundle "kchmck/vim-coffee-script"
+" Bundle "pangloss/vim-javascript"
+" Bundle "digitaltoad/vim-jade"
+" Bundle "kchmck/vim-coffee-script"
 Bundle "nathanaelkane/vim-indent-guides"
-" vundle setting ending
+" }
 
 filetype plugin indent on
 syntax on
