@@ -13,17 +13,45 @@
 " }
 
 " Bundles {
-Bundle "rstacruz/sparkup.git", {'rtp': 'vim/'}
-Bundle "gmarik/snipmate.vim.git"
-Bundle "tpope/vim-surround"
-Bundle "scrooloose/nerdtree"
-Bundle "tomtom/tcomment_vim"
-Bundle "mileszs/ack.vim"
-Bundle "jamescarr/snipmate-nodejs"
-" Bundle "pangloss/vim-javascript"
-" Bundle "digitaltoad/vim-jade"
-" Bundle "kchmck/vim-coffee-script"
-Bundle "nathanaelkane/vim-indent-guides"
+	" Deps 
+		Bundle "gmarik/vundle"
+		Bundle "mileszs/ack.vim"
+	
+	" General
+		Bundle "altercation/vim-colors-solarized"
+		Bundle "rstacruz/sparkup.git", {'rtp': 'vim/'}
+		Bundle "gmarik/snipmate.vim.git"
+		Bundle "tpope/vim-surround"
+		Bundle "scrooloose/nerdtree"
+		Bundle "Lokaltog/vim-powerline"
+		Bundle "Lokaltog/vim-easymotion"
+	
+	" Programming
+		Bundle "scrooloose/nerdcommenter"
+		Bundle "scrooloose/syntastic"
+
+	" Javascript
+		Bundle "jamescarr/snipmate-nodejs"
+		" Bundle "pangloss/vim-javascript"
+		" Bundle "digitaltoad/vim-jade"
+		" Bundle "kchmck/vim-coffee-script"
+		Bundle "nathanaelkane/vim-indent-guides"
+
+	" PHP
+		Bundle "spf13/PIV"
+
+" }
+
+" Plugins {
+
+	" NerdTree
+		map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
+		map <leader>e :NERDTreeFind<CR>
+		nmap <leader>nt :NERDTreeFind<CR>
+
+		let NERDTreeIgnore=['\.swp$', '\.git', '\.svn']
+		let NERDTreeShowHidden=1
+
 " }
 
 filetype plugin indent on
@@ -31,7 +59,7 @@ syntax on
 set history=300
 set autoread
 inoremap jj <ESC>
-colorscheme wombat256
+colorscheme solarized
 
 " Search 
 set ignorecase "Ignore case when searching
