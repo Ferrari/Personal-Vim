@@ -14,31 +14,31 @@
 
 " Bundles {
 	" Deps 
-		Bundle "gmarik/vundle"
-		Bundle "mileszs/ack.vim"
+		Bundle "git://github.com/gmarik/vundle.git"
+		Bundle "git://github.com/mileszs/ack.vim.git"
 	
 	" General
-		Bundle "altercation/vim-colors-solarized"
-		Bundle "rstacruz/sparkup.git", {'rtp': 'vim/'}
-		Bundle "gmarik/snipmate.vim.git"
-		Bundle "tpope/vim-surround"
-		Bundle "scrooloose/nerdtree"
-		Bundle "Lokaltog/vim-powerline"
-		Bundle "Lokaltog/vim-easymotion"
+		Bundle "git://github.com/altercation/vim-colors-solarized.git"
+		Bundle "git://github.com/rstacruz/sparkup.git", {'rtp': 'vim/'}
+		Bundle "git://github.com/gmarik/snipmate.vim.git"
+		Bundle "git://github.com/tpope/vim-surround.git"
+		Bundle "git://github.com/scrooloose/nerdtree.git"
+		Bundle "git://github.com/Lokaltog/vim-powerline.git"
+		Bundle "git://github.com/Lokaltog/vim-easymotion.git"
 	
 	" Programming
-		Bundle "scrooloose/nerdcommenter"
-		Bundle "scrooloose/syntastic"
+		Bundle "git://github.com/scrooloose/nerdcommenter.git"
+		Bundle "git://github.com/scrooloose/syntastic.git"
 
 	" Javascript
-		Bundle "jamescarr/snipmate-nodejs"
+		Bundle "git://github.com/jamescarr/snipmate-nodejs.git"
 		" Bundle "pangloss/vim-javascript"
 		" Bundle "digitaltoad/vim-jade"
 		" Bundle "kchmck/vim-coffee-script"
-		Bundle "nathanaelkane/vim-indent-guides"
+		Bundle "git://github.com/nathanaelkane/vim-indent-guides.git"
 
 	" PHP
-		Bundle "spf13/PIV"
+		Bundle "git://github.com/spf13/PIV.git"
 
 " }
 
