@@ -60,14 +60,18 @@
 	" Sparkup
 		let g:sparkupExecuteMapping = '<c-h>'
 
+	" solarized
+		let g:solarized_termcolors=256
+		syntax enable
+		set background=dark
+		colorscheme solarized
+
 " }
 
 filetype plugin indent on
-syntax on
 set history=300
 set autoread
 inoremap jj <ESC>
-colorscheme solarized
 
 " Search 
 set ignorecase "Ignore case when searching
