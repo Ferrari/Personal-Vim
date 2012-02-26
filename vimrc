@@ -18,7 +18,8 @@
 		Bundle "git://github.com/mileszs/ack.vim.git"
 	
 	" General
-		Bundle "git://github.com/altercation/vim-colors-solarized.git"
+		"Bundle "git://github.com/altercation/vim-colors-solarized.git"
+		Bundle "git://github.com/spf13/vim-colors.git"
 		Bundle "git://github.com/rstacruz/sparkup.git", {'rtp': 'vim/'}
 		Bundle "git://github.com/gmarik/snipmate.vim.git"
 		Bundle "git://github.com/tpope/vim-surround.git"
@@ -60,11 +61,10 @@
 	" Sparkup
 		let g:sparkupExecuteMapping = '<c-h>'
 
-	" solarized
-		let g:solarized_termcolors=256
+	" color
 		syntax enable
 		set background=dark
-		colorscheme solarized
+		colorscheme peaksea
 
 " }
 
