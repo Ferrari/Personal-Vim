@@ -57,6 +57,9 @@
 																\ 'active_filetypes': [],
 																\ 'passive_filetypes': [] }
 
+	" Sparkup
+		let g:sparkupExecuteMapping = '<c-h>'
+
 " }
 
 filetype plugin indent on
@@ -110,9 +113,6 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-
-" Leader mapping
-noremap <leader>nt :NERDTree<cr>
 
 " php setting
 noremap <C-P> :!php -l %<CR>
