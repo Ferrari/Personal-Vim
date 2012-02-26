@@ -52,6 +52,11 @@
 		let NERDTreeIgnore=['\.swp$', '\.git', '\.svn']
 		let NERDTreeShowHidden=1
 
+	" syntastic
+		let g:syntastic_mode_map = { 'mode': 'passive',
+																\ 'active_filetypes': [],
+																\ 'passive_filetypes': [] }
+
 " }
 
 filetype plugin indent on
