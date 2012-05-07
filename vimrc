@@ -30,10 +30,11 @@
 	" Programming
 		Bundle "git://github.com/scrooloose/nerdcommenter.git"
 		Bundle "git://github.com/scrooloose/syntastic.git"
+		Bundle "git://github.com/motemen/git-vim.git"
 
 	" Javascript
 		Bundle "git://github.com/jamescarr/snipmate-nodejs.git"
-		" Bundle "pangloss/vim-javascript"
+		Bundle "git://github.com/pangloss/vim-javascript.git"
 		" Bundle "digitaltoad/vim-jade"
 		" Bundle "kchmck/vim-coffee-script"
 		Bundle "git://github.com/nathanaelkane/vim-indent-guides.git"
@@ -90,9 +91,9 @@ set t_vb=
 set tm=500
 
 " Coding format
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set autoindent
 set smartindent
 set wrap
