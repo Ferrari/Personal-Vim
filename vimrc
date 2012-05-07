@@ -90,7 +90,7 @@ set novisualbell
 set t_vb=
 set tm=500
 
-" Coding format
+" Coding format {
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -99,8 +99,16 @@ set smartindent
 set wrap
 " set expandtab "There might have indent error in some language
 
+	" HTML
+	autocmd FileType html set sw=2
+	autocmd FileType html set ts=2
+	autocmd FileType html set sts=2
+	autocmd FileType html set textwidth=0
+
+" }
+
 " editor setting
-"set number
+set number
 set nocompatible
 set modelines=0 "prevent security exploits in modelines
 set ttyfast
