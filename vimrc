@@ -18,7 +18,7 @@
 		Bundle "git://github.com/mileszs/ack.vim.git"
 	
 	" General
-		"Bundle "git://github.com/altercation/vim-colors-solarized.git"
+		Bundle "git://github.com/altercation/vim-colors-solarized.git"
 		Bundle "git://github.com/spf13/vim-colors.git"
 		Bundle "git://github.com/rstacruz/sparkup.git", {'rtp': 'vim/'}
 		Bundle "git://github.com/gmarik/snipmate.vim.git"
@@ -56,16 +56,18 @@
 
 	" syntastic
 		let g:syntastic_mode_map = { 'mode': 'passive',
-																\ 'active_filetypes': [],
-																\ 'passive_filetypes': [] }
+					\ 'active_filetypes': [],
+					\ 'passive_filetypes': [] }
 
 	" Sparkup
 		let g:sparkupExecuteMapping = '<c-h>'
 
 	" color
+		let g:solarized_termcolors=256
 		syntax enable
 		set background=dark
-		colorscheme peaksea
+		colorscheme solarized
+		"colorscheme peaksea
 
 " }
 
