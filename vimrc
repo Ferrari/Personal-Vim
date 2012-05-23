@@ -32,16 +32,20 @@
 		Bundle "git://github.com/scrooloose/syntastic.git"
 		Bundle "git://github.com/motemen/git-vim.git"
 
-	" Javascript
+	" Javascript/CSS
 		Bundle "git://github.com/jamescarr/snipmate-nodejs.git"
 		Bundle "git://github.com/pangloss/vim-javascript.git"
 		" Bundle "digitaltoad/vim-jade"
 		" Bundle "kchmck/vim-coffee-script"
 		Bundle "git://github.com/nathanaelkane/vim-indent-guides.git"
+		Bundle "git://github.com/groenewege/vim-less.git"
 
 	" PHP
 		Bundle "git://github.com/spf13/PIV.git"
 
+	" Others
+		Bundle "git://github.com/kakkyz81/evervim.git"
+		Bundle "git://github.com/mklabs/vim-backbone.git"
 " }
 
 " Plugins {
@@ -72,6 +76,7 @@
 " }
 
 filetype plugin indent on
+set ofu=syntaxcomplete#Complete "OmniComplete
 set history=300
 set autoread
 inoremap jj <ESC>
@@ -106,6 +111,12 @@ set wrap
 	autocmd FileType html set ts=2
 	autocmd FileType html set sts=2
 	autocmd FileType html set textwidth=0
+
+	" Javascript
+	autocmd FileType javascript set sw=2
+	autocmd FileType javascript set ts=2
+	autocmd FileType javascript set sts=2
+	autocmd FileType javascript set textwidth=0
 
 " }
 
