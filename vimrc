@@ -36,7 +36,7 @@
 		Bundle "git://github.com/jamescarr/snipmate-nodejs.git"
 		Bundle "git://github.com/pangloss/vim-javascript.git"
 		" Bundle "digitaltoad/vim-jade"
-		" Bundle "kchmck/vim-coffee-script"
+		Bundle "kchmck/vim-coffee-script"
 		Bundle "git://github.com/nathanaelkane/vim-indent-guides.git"
 		Bundle "git://github.com/groenewege/vim-less.git"
 
@@ -104,7 +104,7 @@ set softtabstop=4
 set autoindent
 set smartindent
 set wrap
-" set expandtab "There might have indent error in some language
+set expandtab "There might have indent error in some language
 
 	" HTML
 	autocmd FileType html set sw=2
@@ -113,9 +113,9 @@ set wrap
 	autocmd FileType html set textwidth=0
 
 	" Javascript
-	autocmd FileType javascript set sw=2
-	autocmd FileType javascript set ts=2
-	autocmd FileType javascript set sts=2
+	autocmd FileType javascript set sw=4
+	autocmd FileType javascript set ts=4
+	autocmd FileType javascript set sts=4
 	autocmd FileType javascript set textwidth=0
 
 " }
