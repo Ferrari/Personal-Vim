@@ -22,7 +22,7 @@
         Bundle "git://github.com/altercation/vim-colors-solarized.git"
         Bundle "git://github.com/spf13/vim-colors.git"
         Bundle "git://github.com/rstacruz/sparkup.git", {'rtp': 'vim/'}
-        Bundle "git://github.com/gmarik/snipmate.vim.git"
+        Bundle "git://github.com/msanders/snipmate.vim.git"
         Bundle "git://github.com/tpope/vim-surround.git"
         Bundle "git://github.com/scrooloose/nerdtree.git"
         Bundle "git://github.com/Lokaltog/vim-powerline.git"
