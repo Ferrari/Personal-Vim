@@ -36,7 +36,7 @@
 		Bundle "git://github.com/jamescarr/snipmate-nodejs.git"
 		Bundle "git://github.com/pangloss/vim-javascript.git"
 		" Bundle "digitaltoad/vim-jade"
-		" Bundle "kchmck/vim-coffee-script"
+		Bundle "git://github.com/kchmck/vim-coffee-script.git"
 		Bundle "git://github.com/nathanaelkane/vim-indent-guides.git"
 		Bundle "git://github.com/groenewege/vim-less.git"
 
@@ -73,6 +73,8 @@
 		colorscheme solarized
 		"colorscheme peaksea
 
+	" coffee
+		au BufNewFile,BufReadPost *.coffee setl shiftwidth=4 expandtab
 " }
 
 filetype plugin indent on
