@@ -74,6 +74,9 @@
 
 	" coffee
 		au BufNewFile,BufReadPost *.coffee setl shiftwidth=4 expandtab
+
+    " ack
+        let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 " }
 
 filetype plugin indent on
