@@ -40,6 +40,7 @@
         Bundle "git://github.com/nathanaelkane/vim-indent-guides.git"
         Bundle "git://github.com/groenewege/vim-less.git"
         Bundle "git://github.com/mklabs/vim-backbone.git"
+        Bundle "git://github.com/ap/vim-css-color.git"
     
     " PHP
         Bundle "git://github.com/spf13/PIV.git"
