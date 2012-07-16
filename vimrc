@@ -118,9 +118,9 @@ set expandtab "There might have indent error in some language
     autocmd FileType html set textwidth=0
     
     " Javascript
-    autocmd FileType javascript set sw=4
-    autocmd FileType javascript set ts=4
-    autocmd FileType javascript set sts=4
+    autocmd FileType javascript set sw=2
+    autocmd FileType javascript set ts=2
+    autocmd FileType javascript set sts=2
     autocmd FileType javascript set textwidth=0
 
 " }
