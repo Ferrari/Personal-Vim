@@ -69,6 +69,8 @@
     " color
         let g:solarized_termcolors=256
         syntax enable
+        filetype off
+        filetype on
         set background=dark
         colorscheme solarized
         "colorscheme peaksea
@@ -78,6 +80,9 @@
 
     " ack
         let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+
+    " vim-less
+        nnoremap ,m :w <BAR> !lessc % > %:t:r.css<CR><space>
 " }
 
 filetype plugin indent on
