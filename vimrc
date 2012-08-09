@@ -41,7 +41,8 @@
         Bundle "git://github.com/groenewege/vim-less.git"
         Bundle "git://github.com/mklabs/vim-backbone.git"
         Bundle "git://github.com/ap/vim-css-color.git"
-    
+        Bundle "git://github.com/hail2u/vim-css3-syntax.git"
+        
     " PHP
         Bundle "git://github.com/spf13/PIV.git"
     
@@ -127,6 +128,12 @@ set expandtab "There might have indent error in some language
     autocmd FileType javascript set ts=2
     autocmd FileType javascript set sts=2
     autocmd FileType javascript set textwidth=0
+
+    " CSS/LESS
+    autocmd FileType css,less set sw=4
+    autocmd FileType css,less set ts=4
+    autocmd FileType css,less set sts=4
+    autocmd FileType css,less set textwidth=0
 
 " }
 
