@@ -130,9 +130,9 @@ set expandtab "There might have indent error in some language
     autocmd FileType javascript set textwidth=0
 
     " CSS/LESS
-    autocmd FileType css,less set sw=4
-    autocmd FileType css,less set ts=4
-    autocmd FileType css,less set sts=4
+    autocmd FileType css,less set sw=2
+    autocmd FileType css,less set ts=2
+    autocmd FileType css,less set sts=2
     autocmd FileType css,less set textwidth=0
 
 " }
