@@ -160,3 +160,6 @@ nnoremap <C-l> <C-w>l
 " php setting
 noremap <C-P> :!php -l %<CR>
 
+" Use The Silver Searcher to replace ACK
+" https://github.com/ggreer/the_silver_searcher
+let g:ackprg = 'ag --nogroup --nocolor --column'
