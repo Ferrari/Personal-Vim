@@ -63,6 +63,10 @@
         let g:syntastic_mode_map = { 'mode': 'passive',
                                    \ 'active_filetypes': [],
                                    \ 'passive_filetypes': [] }
+        let g:syntastic_loc_list_height = 5
+        let g:syntastic_enable_highlighting = 0
+        let g:syntastic_error_symbol = '✗'
+        let g:syntastic_warning_symbol = '⚠'
     
     " Sparkup
         let g:sparkupExecuteMapping = '<c-h>'
