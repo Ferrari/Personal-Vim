@@ -43,6 +43,9 @@
         Bundle "git://github.com/ap/vim-css-color.git"
         Bundle "git://github.com/hail2u/vim-css3-syntax.git"
         
+    " GO
+        Bundle "git://github.com/jnwhiteh/vim-golang.git"
+
     " PHP
         Bundle "git://github.com/spf13/PIV.git"
     
