@@ -11,8 +11,12 @@ Migrate with [spf13-vim](https://github.com/spf13/spf13-vim)
 
 `curl https://github.com/Ferrari/Personal-Vim/raw/master/bootstrap.sh -L -o - | sh`
 
+If you want to use [syntastic](https://github.com/scrooloose/syntastic) to check syntax, make sure you also have the tool. 
+Ex: I use JS, so `npm install -g jshint` first!
+
 ## ChangeLog
 
+* v1.0.6 - add [yaml](https://github.com/ingydotnet/yaml-vim) support
 * v1.0.5 - add [golang](https://github.com/jnwhiteh/vim-golang) support  
 * v1.0.4 - change css indent from 4 to 2 (follow google html/css style rule)  
 * v1.0.3 - add [vim-css3-syntax](https://github.com/hail2u/vim-css3-syntax)

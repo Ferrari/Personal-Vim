@@ -51,6 +51,7 @@
     
     " Others
         Bundle "git://github.com/kakkyz81/evervim.git"
+        Bundle "git://github.com/ingydotnet/yaml-vim.git"
 " }
 
 " Plugins {
