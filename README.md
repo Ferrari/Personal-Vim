@@ -9,10 +9,19 @@ Migrate with [spf13-vim](https://github.com/spf13/spf13-vim)
 
 ## Install
 
-`curl https://github.com/Ferrari/Personal-Vim/raw/master/bootstrap.sh -L -o - | sh`
+```
+curl https://github.com/Ferrari/Personal-Vim/raw/master/bootstrap.sh -L -o - | sh
+```
+
+## Update
+
+```
+vim +BundleInstall! +BundleClean! +q
+```
 
 ## ChangeLog
 
+* v1.0.6 - add [vim-gitgutter](https://github.com/airblade/vim-gitgutter) to show git diff, there is a issue with Syntastic, so set it to passive mode
 * v1.0.5 - add [golang](https://github.com/jnwhiteh/vim-golang) support  
 * v1.0.4 - change css indent from 4 to 2 (follow google html/css style rule)  
 * v1.0.3 - add [vim-css3-syntax](https://github.com/hail2u/vim-css3-syntax)

@@ -32,6 +32,7 @@
         Bundle "git://github.com/scrooloose/nerdcommenter.git"
         Bundle "git://github.com/scrooloose/syntastic.git"
         Bundle "git://github.com/motemen/git-vim.git"
+        Bundle "git://github.com/airblade/vim-gitgutter.git"
     
     " Javascript/CSS
         Bundle "git://github.com/jamescarr/snipmate-nodejs.git"
@@ -71,6 +72,9 @@
         let g:syntastic_error_symbol = '✗'
         let g:syntastic_warning_symbol = '⚠'
     
+    " gitgutter
+        let g:gitgutter_enabled = 0
+
     " Sparkup
         let g:sparkupExecuteMapping = '<c-h>'
     
