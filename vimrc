@@ -43,15 +43,13 @@
         Bundle "git://github.com/mklabs/vim-backbone.git"
         Bundle "git://github.com/ap/vim-css-color.git"
         Bundle "git://github.com/hail2u/vim-css3-syntax.git"
+        Bundle "git://github.com/briancollins/vim-jst.git"
         
     " GO
         Bundle "git://github.com/jnwhiteh/vim-golang.git"
 
     " PHP
         Bundle "git://github.com/spf13/PIV.git"
-    
-    " Others
-        Bundle "git://github.com/kakkyz81/evervim.git"
 " }
 
 " Plugins {
@@ -126,13 +124,13 @@ set softtabstop=4
 set autoindent
 set smartindent
 set wrap
-set expandtab "There might have indent error in some language
+set expandtab
 
     " HTML
-    autocmd FileType html set sw=2
-    autocmd FileType html set ts=2
-    autocmd FileType html set sts=2
-    autocmd FileType html set textwidth=0
+    autocmd FileType html,jst set sw=2
+    autocmd FileType html,jst set ts=2
+    autocmd FileType html,jst set sts=2
+    autocmd FileType html,jst set textwidth=0
     
     " Javascript
     autocmd FileType javascript set sw=2
