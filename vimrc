@@ -32,6 +32,7 @@
         Bundle "git://github.com/scrooloose/nerdcommenter.git"
         Bundle "git://github.com/scrooloose/syntastic.git"
         Bundle "git://github.com/motemen/git-vim.git"
+        Bundle "git://github.com/Valloric/YouCompleteMe.git"
     
     " Javascript/CSS
         Bundle "git://github.com/jamescarr/snipmate-nodejs.git"
