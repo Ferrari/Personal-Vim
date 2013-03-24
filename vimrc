@@ -36,6 +36,7 @@
         Bundle "git://github.com/Valloric/YouCompleteMe.git"
     
     " Javascript/CSS
+        Bundle "git://github.com/mattn/zencoding-vim.git"
         Bundle "git://github.com/jamescarr/snipmate-nodejs.git"
         Bundle "git://github.com/pangloss/vim-javascript.git"
         Bundle "git://github.com/kchmck/vim-coffee-script.git"

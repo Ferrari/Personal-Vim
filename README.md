@@ -24,6 +24,7 @@ Ex: I use JS, so `npm install -g jshint` first!
 
 ## ChangeLog
 
+* v1.1.0 - [zencoding] for faster html development
 * v1.0.8 - [vim-jst](https://github.com/briancollins/vim-jst) for ejs template editing.
 * v1.0.7 - add [vim-gitgutter](https://github.com/airblade/vim-gitgutter) to show git diff, there is a issue with Syntastic, so set it to passive mode
 * v1.0.6 - add [yaml](https://github.com/ingydotnet/yaml-vim) support
