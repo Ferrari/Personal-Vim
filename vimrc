@@ -177,3 +177,6 @@ noremap <C-P> :!php -l %<CR>
 " Use The Silver Searcher to replace ACK
 " https://github.com/ggreer/the_silver_searcher
 let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" hack
+cmap w!! %!sudo tee > /dev/null %
