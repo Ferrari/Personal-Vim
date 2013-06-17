@@ -24,6 +24,7 @@ Ex: I use JS, so `npm install -g jshint` first!
 
 ## ChangeLog
 
+* v1.1.2 - [jade](https://github.com/digitaltoad/vim-jade) template support
 * v1.1.1 - sudo hack [w!!](https://coderwall.com/p/xp9kjw)
 * v1.1.0 - [zencoding] for faster html development
 * v1.0.8 - [vim-jst](https://github.com/briancollins/vim-jst) for ejs template editing.

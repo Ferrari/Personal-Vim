@@ -46,6 +46,7 @@
         Bundle "git://github.com/ap/vim-css-color.git"
         Bundle "git://github.com/hail2u/vim-css3-syntax.git"
         Bundle "git://github.com/briancollins/vim-jst.git"
+        Bundle "git://github.com/othree/javascript-libraries-syntax.vim.git"
         
     " GO
         Bundle "git://github.com/jnwhiteh/vim-golang.git"
@@ -55,6 +56,7 @@
     
     " Others
         Bundle "git://github.com/ingydotnet/yaml-vim.git"
+        Bundle "git://github.com/digitaltoad/vim-jade.git"
 " }
 
 " Plugins {
@@ -132,10 +134,10 @@ set wrap
 set expandtab
 
     " HTML
-    autocmd FileType html,jst set sw=2
-    autocmd FileType html,jst set ts=2
-    autocmd FileType html,jst set sts=2
-    autocmd FileType html,jst set textwidth=0
+    autocmd FileType html,jst,jade set sw=2
+    autocmd FileType html,jst,jade set ts=2
+    autocmd FileType html,jst,jade set sts=2
+    autocmd FileType html,jst,jade set textwidth=0
     
     " Javascript
     autocmd FileType javascript set sw=2
