@@ -24,6 +24,7 @@ Ex: I use JS, so `npm install -g jshint` first!
 
 ## ChangeLog
 
+* v1.2.0 - Replace [powerline](https://github.com/Lokaltog/powerline) using [vim-airline](https://github.com/bling/vim-airline)
 * v1.1.2 - [jade](https://github.com/digitaltoad/vim-jade) template support
 * v1.1.1 - sudo hack [w!!](https://coderwall.com/p/xp9kjw)
 * v1.1.0 - [zencoding] for faster html development

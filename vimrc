@@ -25,8 +25,8 @@
         Bundle "https://github.com/Ferrari/snipmate.vim.git"
         Bundle "git://github.com/tpope/vim-surround.git"
         Bundle "git://github.com/scrooloose/nerdtree.git"
-        Bundle "git://github.com/Lokaltog/vim-powerline.git"
-        Bundle "git://github.com/Lokaltog/vim-easymotion.git"
+        Bundle "https://github.com/bling/vim-airline.git"
+        Bundle "https://github.com/Lokaltog/vim-easymotion.git"
     
     " Programming
         Bundle "git://github.com/scrooloose/nerdcommenter.git"
@@ -51,9 +51,6 @@
     " GO
         Bundle "git://github.com/jnwhiteh/vim-golang.git"
 
-    " PHP
-        Bundle "git://github.com/spf13/PIV.git"
-    
     " Others
         Bundle "git://github.com/ingydotnet/yaml-vim.git"
         Bundle "git://github.com/digitaltoad/vim-jade.git"
