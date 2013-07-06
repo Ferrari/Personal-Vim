@@ -163,6 +163,9 @@ set foldmethod=marker
 ino <c-j> <c-r>=TriggerSnippet()<cr>
 snor <c-j> <esc>i<right><c-r>=TriggerSnippet()<cr>
 
+" vim-airline
+let g:airline_theme='simple'
+
 " Split windows
 nnoremap <leader>w <C-w>v<C-w>l
 nnoremap <C-h> <C-w>h
