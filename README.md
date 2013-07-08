@@ -24,6 +24,7 @@ Ex: I use JS, so `npm install -g jshint` first!
 
 ## ChangeLog
 
+* v1.3.0 - Replace indent as [indentLine](https://github.com/Yggdroot/indentLine) and add [delimitMate](https://github.com/Raimondi/delimitMate)
 * v1.2.0 - Replace [powerline](https://github.com/Lokaltog/powerline) using [vim-airline](https://github.com/bling/vim-airline)
 * v1.1.2 - [jade](https://github.com/digitaltoad/vim-jade) template support
 * v1.1.1 - sudo hack [w!!](https://coderwall.com/p/xp9kjw)

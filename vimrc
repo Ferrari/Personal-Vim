@@ -27,6 +27,7 @@
         Bundle "git://github.com/scrooloose/nerdtree.git"
         Bundle "https://github.com/bling/vim-airline.git"
         Bundle "https://github.com/Lokaltog/vim-easymotion.git"
+        Bundle "https://github.com/Yggdroot/indentLine.git"
     
     " Programming
         Bundle "git://github.com/scrooloose/nerdcommenter.git"
@@ -34,13 +35,13 @@
         Bundle "git://github.com/motemen/git-vim.git"
         Bundle "git://github.com/airblade/vim-gitgutter.git"
         Bundle "git://github.com/Valloric/YouCompleteMe.git"
+        Bundle "https://github.com/Raimondi/delimitMate.git"
     
     " Javascript/CSS
         Bundle "git://github.com/mattn/zencoding-vim.git"
         Bundle "git://github.com/jamescarr/snipmate-nodejs.git"
         Bundle "git://github.com/pangloss/vim-javascript.git"
         Bundle "git://github.com/kchmck/vim-coffee-script.git"
-        Bundle "git://github.com/nathanaelkane/vim-indent-guides.git"
         Bundle "git://github.com/groenewege/vim-less.git"
         Bundle "git://github.com/mklabs/vim-backbone.git"
         Bundle "git://github.com/ap/vim-css-color.git"
@@ -97,6 +98,14 @@
 
     " vim-less
         nnoremap ,m :w <BAR> !lessc % > %:t:r.css<CR><space>
+
+    " Snipmate
+        ino <c-j> <c-r>=TriggerSnippet()<cr>
+        snor <c-j> <esc>i<right><c-r>=TriggerSnippet()<cr>
+    
+    " vim-airline
+        let g:airline_theme='simple'
+
 " }
 
 filetype plugin indent on
@@ -158,13 +167,6 @@ set ttyfast
 set ruler
 set laststatus=2
 set foldmethod=marker
-
-" Snipmate
-ino <c-j> <c-r>=TriggerSnippet()<cr>
-snor <c-j> <esc>i<right><c-r>=TriggerSnippet()<cr>
-
-" vim-airline
-let g:airline_theme='simple'
 
 " Split windows
 nnoremap <leader>w <C-w>v<C-w>l
