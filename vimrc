@@ -36,6 +36,7 @@
         Bundle "git://github.com/airblade/vim-gitgutter.git"
         Bundle "git://github.com/Valloric/YouCompleteMe.git"
         Bundle "https://github.com/Raimondi/delimitMate.git"
+        Bundle "https://github.com/vim-scripts/matchit.zip.git"
     
     " Javascript/CSS
         Bundle "git://github.com/mattn/zencoding-vim.git"
