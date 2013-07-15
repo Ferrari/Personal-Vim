@@ -24,6 +24,7 @@ Ex: I use JS, so `npm install -g jshint` first!
 
 ## ChangeLog
 
+* v1.4.1 - Change plugin to github style and fix snipmate plugin
 * v1.4.0 - Add [matchit](https://github.com/vim-scripts/matchit.zip.git)
 * v1.3.0 - Replace indent as [indentLine](https://github.com/Yggdroot/indentLine) and add [delimitMate](https://github.com/Raimondi/delimitMate)
 * v1.2.0 - Replace [powerline](https://github.com/Lokaltog/powerline) using [vim-airline](https://github.com/bling/vim-airline)

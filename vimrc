@@ -14,48 +14,50 @@
 
 " Bundles {
     " Deps 
-        Bundle "git://github.com/gmarik/vundle.git"
-        Bundle "git://github.com/mileszs/ack.vim.git"
-        Bundle "git://github.com/kien/ctrlp.vim.git"
+        Bundle "gmarik/vundle.git"
+        Bundle "mileszs/ack.vim.git"
+        Bundle "kien/ctrlp.vim.git"
     
     " General
-        Bundle "git://github.com/altercation/vim-colors-solarized.git"
-        Bundle "git://github.com/spf13/vim-colors.git"
-        Bundle "git://github.com/rstacruz/sparkup.git", {'rtp': 'vim/'}
-        Bundle "https://github.com/Ferrari/snipmate.vim.git"
-        Bundle "git://github.com/tpope/vim-surround.git"
-        Bundle "git://github.com/scrooloose/nerdtree.git"
-        Bundle "https://github.com/bling/vim-airline.git"
-        Bundle "https://github.com/Lokaltog/vim-easymotion.git"
-        Bundle "https://github.com/Yggdroot/indentLine.git"
+        Bundle "altercation/vim-colors-solarized.git"
+        Bundle "spf13/vim-colors.git"
+        Bundle "rstacruz/sparkup.git", {'rtp': 'vim/'}
+        Bundle "tpope/vim-surround.git"
+        Bundle "scrooloose/nerdtree.git"
+        Bundle "bling/vim-airline.git"
+        Bundle "Lokaltog/vim-easymotion.git"
+        Bundle "Yggdroot/indentLine.git"
     
     " Programming
-        Bundle "git://github.com/scrooloose/nerdcommenter.git"
-        Bundle "git://github.com/scrooloose/syntastic.git"
-        Bundle "git://github.com/motemen/git-vim.git"
-        Bundle "git://github.com/airblade/vim-gitgutter.git"
-        Bundle "git://github.com/Valloric/YouCompleteMe.git"
-        Bundle "https://github.com/Raimondi/delimitMate.git"
-        Bundle "https://github.com/vim-scripts/matchit.zip.git"
+        Bundle "scrooloose/nerdcommenter.git"
+        Bundle "scrooloose/syntastic.git"
+        Bundle "motemen/git-vim.git"
+        Bundle "airblade/vim-gitgutter.git"
+        Bundle "Valloric/YouCompleteMe.git"
+        Bundle "Raimondi/delimitMate.git"
+        Bundle "vim-scripts/matchit.zip.git"
+        Bundle "MarcWeber/vim-addon-mw-utils"
+        Bundle "tomtom/tlib_vim"
+        Bundle "garbas/vim-snipmate"
+        Bundle "honza/vim-snippets"
     
     " Javascript/CSS
-        Bundle "git://github.com/mattn/zencoding-vim.git"
-        Bundle "git://github.com/jamescarr/snipmate-nodejs.git"
-        Bundle "git://github.com/pangloss/vim-javascript.git"
-        Bundle "git://github.com/kchmck/vim-coffee-script.git"
-        Bundle "git://github.com/groenewege/vim-less.git"
-        Bundle "git://github.com/mklabs/vim-backbone.git"
-        Bundle "git://github.com/ap/vim-css-color.git"
-        Bundle "git://github.com/hail2u/vim-css3-syntax.git"
-        Bundle "git://github.com/briancollins/vim-jst.git"
-        Bundle "git://github.com/othree/javascript-libraries-syntax.vim.git"
+        Bundle "mattn/zencoding-vim.git"
+        Bundle "pangloss/vim-javascript.git"
+        Bundle "kchmck/vim-coffee-script.git"
+        Bundle "groenewege/vim-less.git"
+        Bundle "mklabs/vim-backbone.git"
+        Bundle "ap/vim-css-color.git"
+        Bundle "hail2u/vim-css3-syntax.git"
+        Bundle "briancollins/vim-jst.git"
+        Bundle "othree/javascript-libraries-syntax.vim.git"
         
     " GO
-        Bundle "git://github.com/jnwhiteh/vim-golang.git"
+        Bundle "jnwhiteh/vim-golang.git"
 
     " Others
-        Bundle "git://github.com/ingydotnet/yaml-vim.git"
-        Bundle "git://github.com/digitaltoad/vim-jade.git"
+        Bundle "ingydotnet/yaml-vim.git"
+        Bundle "digitaltoad/vim-jade.git"
 " }
 
 " Plugins {
@@ -101,8 +103,8 @@
         nnoremap ,m :w <BAR> !lessc % > %:t:r.css<CR><space>
 
     " Snipmate
-        ino <c-j> <c-r>=TriggerSnippet()<cr>
-        snor <c-j> <esc>i<right><c-r>=TriggerSnippet()<cr>
+        ino <c-j> <c-r>=snipMate#TriggerSnippet()<cr>
+        snor <c-j> <esc>i<right><c-r>=snipMate#TriggerSnippet()<cr>
     
     " vim-airline
         let g:airline_theme='simple'
