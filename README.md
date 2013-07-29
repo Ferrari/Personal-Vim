@@ -24,6 +24,7 @@ Ex: I use JS, so `npm install -g jshint` first!
 
 ## ChangeLog
 
+* v1.5.0 - Change default coding indent as 2
 * v1.4.1 - Change plugin to github style and fix snipmate plugin
 * v1.4.0 - Add [matchit](https://github.com/vim-scripts/matchit.zip.git)
 * v1.3.0 - Replace indent as [indentLine](https://github.com/Yggdroot/indentLine) and add [delimitMate](https://github.com/Raimondi/delimitMate)
