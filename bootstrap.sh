@@ -50,6 +50,7 @@ create_symlinks() {
 
 # Setup Directory
 msg "Setup personal dotfiles..."
+git clone --recursive https://github.com/Ferrari/dotfiles.git $endpath
 mkdir -p $bundlepath
 mkdir -p $backuppath
 
@@ -58,8 +59,7 @@ msg "backing up current dotfiles..."
 do_backup
 
 # Origin Project is spf13-vim.git
-msg "cloning dotfiles repository..."
-git clone --recursive https://github.com/Ferrari/dotfiles.git $endpath
+msg "create symlink..."
 create_symlinks
 
 msg "Installing Vundle"
