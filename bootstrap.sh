@@ -59,7 +59,7 @@ do_backup
 
 # Origin Project is spf13-vim.git
 msg "cloning dotfiles repository..."
-git clone --recursive https://github.com/Ferrari/Personal-Vim.git $endpath
+git clone --recursive https://github.com/Ferrari/dotfiles.git $endpath
 create_symlinks
 
 msg "Installing Vundle"
