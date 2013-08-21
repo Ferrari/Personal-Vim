@@ -1,16 +1,13 @@
-## Personal Vimrc
+# dotfiles
 
-This is my personal vim config  
-Nothing special, just for backup.
-
-vim plugin management based on [vundle](https://github.com/gmarik/vundle)
-
-Migrate with [spf13-vim](https://github.com/spf13/spf13-vim)
+> This is my personal dotfiles
+vim plugin management based on [vundle](https://github.com/gmarik/vundle)  
+Migrate from [spf13-vim](https://github.com/spf13/spf13-vim)
 
 ## Install
 
 ```
-curl https://github.com/Ferrari/Personal-Vim/raw/master/bootstrap.sh -L -o - | sh
+curl https://github.com/Ferrari/dotfiles/raw/master/bootstrap.sh -L -o - | sh
 ```
 
 ## Update
