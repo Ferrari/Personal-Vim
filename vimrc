@@ -27,6 +27,7 @@
         Bundle "bling/vim-airline.git"
         Bundle "Lokaltog/vim-easymotion.git"
         Bundle "Yggdroot/indentLine.git"
+        Bundle "majutsushi/tagbar"
     
     " Programming
         Bundle "scrooloose/nerdcommenter.git"
@@ -43,17 +44,16 @@
     
     " Javascript/CSS
         Bundle "mattn/zencoding-vim.git"
-        Bundle "pangloss/vim-javascript.git"
         Bundle "kchmck/vim-coffee-script.git"
         Bundle "groenewege/vim-less.git"
-        Bundle "mklabs/vim-backbone.git"
         Bundle "ap/vim-css-color.git"
         Bundle "hail2u/vim-css3-syntax.git"
         Bundle "briancollins/vim-jst.git"
         Bundle "othree/javascript-libraries-syntax.vim.git"
         
     " GO
-        Bundle "jnwhiteh/vim-golang.git"
+        Bundle "golangtw/go.vim"
+        Bundle "jstemmer/gotags"
 
     " Others
         Bundle "ingydotnet/yaml-vim.git"
@@ -63,51 +63,54 @@
 " Plugins {
 
     " NerdTree
-        map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
-        map <leader>e :NERDTreeFind<CR>
-        nmap <leader>nt :NERDTreeFind<CR>
-        let NERDTreeIgnore=['\.swp$', '\.git', '\.svn']
-        let NERDTreeShowHidden=1
+      map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
+      map <leader>e :NERDTreeFind<CR>
+      nmap <leader>nt :NERDTreeFind<CR>
+      let NERDTreeIgnore=['\.swp$', '\.git', '\.svn']
+      let NERDTreeShowHidden=1
     
     " syntastic
-        let g:syntastic_mode_map = { 'mode': 'passive',
-                                   \ 'active_filetypes': [],
-                                   \ 'passive_filetypes': [] }
-        let g:syntastic_loc_list_height = 5
-        let g:syntastic_enable_highlighting = 0
-        let g:syntastic_error_symbol = '✗'
-        let g:syntastic_warning_symbol = '⚠'
+      let g:syntastic_mode_map = { 'mode': 'passive',
+                                 \ 'active_filetypes': [],
+                                 \ 'passive_filetypes': [] }
+      let g:syntastic_loc_list_height = 5
+      let g:syntastic_enable_highlighting = 0
+      let g:syntastic_error_symbol = '✗'
+      let g:syntastic_warning_symbol = '⚠'
     
     " gitgutter
-        let g:gitgutter_enabled = 0
+      let g:gitgutter_enabled = 0
 
     " Sparkup
-        let g:sparkupExecuteMapping = '<c-h>'
+      let g:sparkupExecuteMapping = '<c-h>'
     
     " color
-        let g:solarized_termcolors=256
-        syntax enable
-        filetype off
-        filetype on
-        set background=dark
-        colorscheme solarized
-        "colorscheme peaksea
+      let g:solarized_termcolors=256
+      syntax enable
+      filetype off
+      filetype on
+      set background=dark
+      colorscheme solarized
+      "colorscheme peaksea
 
 	" coffee
 		au BufNewFile,BufReadPost *.coffee setl shiftwidth=4 expandtab
 
     " ack
-        let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+      let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
     " vim-less
-        nnoremap ,m :w <BAR> !lessc % > %:t:r.css<CR><space>
+      nnoremap ,m :w <BAR> !lessc % > %:t:r.css<CR><space>
 
     " Snipmate
-        ino <c-j> <c-r>=snipMate#TriggerSnippet()<cr>
-        snor <c-j> <esc>i<right><c-r>=snipMate#TriggerSnippet()<cr>
+      ino <c-j> <c-r>=snipMate#TriggerSnippet()<cr>
+      snor <c-j> <esc>i<right><c-r>=snipMate#TriggerSnippet()<cr>
     
     " vim-airline
-        let g:airline_theme='simple'
+      let g:airline_theme='simple'
+
+    " tarbar
+      nmap <F8> :TagbarToggle<CR>
 
 " }
 

@@ -21,6 +21,7 @@ Ex: I use JS, so `npm install -g jshint` first!
 
 ## ChangeLog
 
+* v1.6.0 - Some golang twist by [golang vim](http://blog.hsatac.net/2013/08/my-vimrc-for-golang/)
 * v1.5.0 - Change default coding indent as 2
 * v1.4.1 - Change plugin to github style and fix snipmate plugin
 * v1.4.0 - Add [matchit](https://github.com/vim-scripts/matchit.zip.git)
