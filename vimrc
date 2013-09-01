@@ -14,49 +14,49 @@
 
 " Bundles {
     " Deps 
-        Bundle "gmarik/vundle.git"
-        Bundle "mileszs/ack.vim.git"
-        Bundle "kien/ctrlp.vim.git"
+        Bundle "gmarik/vundle"
+        Bundle "mileszs/ack.vim"
+        Bundle "kien/ctrlp.vim"
     
     " General
-        Bundle "altercation/vim-colors-solarized.git"
-        Bundle "spf13/vim-colors.git"
-        Bundle "rstacruz/sparkup.git", {'rtp': 'vim/'}
-        Bundle "tpope/vim-surround.git"
-        Bundle "scrooloose/nerdtree.git"
-        Bundle "bling/vim-airline.git"
-        Bundle "Lokaltog/vim-easymotion.git"
-        Bundle "Yggdroot/indentLine.git"
+        Bundle "altercation/vim-colors-solarized"
+        Bundle "spf13/vim-colors"
+        Bundle "rstacruz/sparkup", {'rtp': 'vim/'}
+        Bundle "tpope/vim-surround"
+        Bundle "scrooloose/nerdtree"
+        Bundle "bling/vim-airline"
+        Bundle "Lokaltog/vim-easymotion"
+        Bundle "Yggdroot/indentLine"
         Bundle "majutsushi/tagbar"
     
     " Programming
-        Bundle "scrooloose/nerdcommenter.git"
-        Bundle "scrooloose/syntastic.git"
-        Bundle "motemen/git-vim.git"
-        Bundle "airblade/vim-gitgutter.git"
-        Bundle "Valloric/YouCompleteMe.git"
-        Bundle "Raimondi/delimitMate.git"
-        Bundle "vim-scripts/matchit.zip.git"
+        Bundle "scrooloose/nerdcommenter"
+        Bundle "scrooloose/syntastic"
+        Bundle "motemen/git-vim"
+        Bundle "airblade/vim-gitgutter"
+        Bundle "Valloric/YouCompleteMe"
+        Bundle "Raimondi/delimitMate"
+        Bundle "vim-scripts/matchit.zip"
         Bundle "MarcWeber/vim-addon-mw-utils"
         Bundle "tomtom/tlib_vim"
         Bundle "garbas/vim-snipmate"
         Bundle "honza/vim-snippets"
     
     " Javascript/CSS
-        Bundle "mattn/zencoding-vim.git"
-        Bundle "kchmck/vim-coffee-script.git"
-        Bundle "groenewege/vim-less.git"
-        Bundle "ap/vim-css-color.git"
-        Bundle "hail2u/vim-css3-syntax.git"
-        Bundle "briancollins/vim-jst.git"
-        Bundle "othree/javascript-libraries-syntax.vim.git"
+        Bundle "mattn/zencoding-vim"
+        Bundle "kchmck/vim-coffee-script"
+        Bundle "groenewege/vim-less"
+        Bundle "ap/vim-css-color"
+        Bundle "hail2u/vim-css3-syntax"
+        Bundle "briancollins/vim-jst"
+        Bundle "othree/javascript-libraries-syntax.vim"
         
     " GO
         Bundle "golangtw/go.vim"
 
     " Others
-        Bundle "ingydotnet/yaml-vim.git"
-        Bundle "digitaltoad/vim-jade.git"
+        Bundle "ingydotnet/yaml-vim"
+        Bundle "digitaltoad/vim-jade"
 " }
 
 " Plugins {
@@ -64,11 +64,13 @@
     " NerdTree
       map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
       map <leader>e :NERDTreeFind<CR>
+      nmap <F5> :NERDTreeToggle<CR>
       nmap <leader>nt :NERDTreeFind<CR>
       let NERDTreeIgnore=['\.swp$', '\.git', '\.svn']
       let NERDTreeShowHidden=1
     
     " syntastic
+      nmap <F7> :SyntasticCheck<CR>
       let g:syntastic_mode_map = { 'mode': 'passive',
                                  \ 'active_filetypes': [],
                                  \ 'passive_filetypes': [] }
@@ -110,6 +112,10 @@
 
     " tarbar
       nmap <F8> :TagbarToggle<CR>
+
+    " go.vim
+    " auto run `go fmt` when you save the file
+      au FileType go au BufWritePre <buffer> Fmt
     
     " gotags
     " https://github.com/jstemmer/gotags
