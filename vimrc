@@ -15,7 +15,7 @@
 " Bundles {
     " Deps 
         Bundle "gmarik/vundle"
-        Bundle "mileszs/ack.vim"
+        Bundle "rking/ag.vim"
         Bundle "kien/ctrlp.vim"
     
     " General
@@ -97,8 +97,8 @@
 	" coffee
 		au BufNewFile,BufReadPost *.coffee setl shiftwidth=4 expandtab
 
-    " ack
-      let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+    " ag
+      let g:agprg = 'ag --nogroup --column'
 
     " vim-less
       nnoremap ,m :w <BAR> !lessc % > %:t:r.css<CR><space>
@@ -218,10 +218,6 @@ nnoremap <C-l> <C-w>l
 
 " php setting
 noremap <C-P> :!php -l %<CR>
-
-" Use The Silver Searcher to replace ACK
-" https://github.com/ggreer/the_silver_searcher
-let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " hack
 cmap w!! %!sudo tee > /dev/null %

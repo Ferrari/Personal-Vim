@@ -21,6 +21,7 @@ Ex: I use JS, so `npm install -g jshint` first!
 
 ## ChangeLog
 
+* v1.7.0 - Use [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) replace ack
 * v1.6.0 - Some golang twist by [golang vim](http://blog.hsatac.net/2013/08/my-vimrc-for-golang/)
 * v1.5.0 - Change default coding indent as 2
 * v1.4.1 - Change plugin to github style and fix snipmate plugin

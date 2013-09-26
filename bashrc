@@ -133,6 +133,12 @@ if [ $OS == "Darwin" ]; then
     fi
 fi
 
+## Useful alias
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+# open github repository
+alias gh="open `git remote -v | grep github.com | grep fetch  | head -1 | cut -f2 | cut -d' ' -f1 | sed -e 's/git:/http:/'`"
+
 ## Programming Tools
 # nvm - nodejs version control 
 if [ -f ~/.nvm/nvm.sh ]; then
@@ -184,6 +190,12 @@ if [ $OS = "Darwin" ]; then
     if [ -x "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ]; then
         export PATH="$PATH":"/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin"
     fi
+fi
+
+## jenv - java environment
+if [ -f /usr/local/bin/jenv ]; then
+  export PATH="$HOME/.jenv/bin:$PATH"
+  eval "$(jenv init -)"
 fi
 
 ## android
