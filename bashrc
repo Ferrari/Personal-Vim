@@ -131,6 +131,7 @@ if [ $OS == "Darwin" ]; then
     if [ -d /usr/local/bin ]; then
         export PATH=/usr/local/bin:"$PATH"
     fi
+    export CLICOLOR=1
 fi
 
 ## Useful alias
