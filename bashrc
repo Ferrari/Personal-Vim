@@ -218,3 +218,4 @@ if [ -f $PSHELL ]; then
     export PROMPT_COMMAND="_update_ps1"
 fi
 
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
