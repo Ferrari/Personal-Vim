@@ -128,6 +128,7 @@ fi
 OS=`uname`
 if [ $OS == "Darwin" ]; then
     alias vim='mvim -v'
+    alias dissec='open -a Google\ Chrome\ Canary --args --disable-web-security'
     if [ -d /usr/local/bin ]; then
         export PATH=/usr/local/bin:"$PATH"
     fi
@@ -138,7 +139,10 @@ fi
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 # open github repository
-alias gh="open `git remote -v | grep github.com | grep fetch  | head -1 | cut -f2 | cut -d' ' -f1 | sed -e 's/git:/http:/'`"
+function openGithub {
+  eval "open `git remote -v | grep github.com | grep fetch  | head -1 | cut -f2 | cut -d' ' -f1 | sed -e 's/git:/http:/'`"
+}
+alias ghopen="openGithub"
 
 ## Programming Tools
 # nvm - nodejs version control 
