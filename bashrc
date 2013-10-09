@@ -214,7 +214,10 @@ if [ -d $ANDROID_PLATFORM ]; then
 fi
 
 ## python setting
-#[[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
+if [ -d $HOME/.pyenv ]; then
+  export PYENV_ROOT="$HOME/.pyenv"
+  export PATH="$PYENV_ROOT/bin:$PATH"
+fi
 PSHELL=~/Programming/resources/powerline-shell/powerline-shell.py
 if [ -f $PSHELL ]; then
     function _update_ps1() {
