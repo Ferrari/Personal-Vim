@@ -145,13 +145,13 @@ function openGithub {
 alias ghopen="openGithub"
 
 ## Programming Tools
+Z_DIR=~/Programming/resources/z
+if [ -f $Z_DIR/z.sh ]; then
+	. $Z_DIR/z.sh
+fi
 # nvm - nodejs version control 
 if [ -f ~/.nvm/nvm.sh ]; then
 	. ~/.nvm/nvm.sh
-fi
-# phpbrew - php version control
-if [ -f ~/.phpbrew/bashrc ]; then
-	. ~/.phpbrew/bashrc
 fi
 # gvm
 if [ -f $HOME/.gvm/scripts/gvm ]; then
@@ -166,10 +166,6 @@ fi
 PERSONAL_DIR=~/Programming/resources
 if [ -d $PERSONAL_DIR ]; then
     export PATH="$PATH":"$PERSONAL_DIR"
-fi
-Z_DIR=~/Programming/resources/z
-if [ -f $Z_DIR/z.sh ]; then
-	. $Z_DIR/z.sh
 fi
 
 ## node-webkit
@@ -218,11 +214,11 @@ if [ -d $HOME/.pyenv ]; then
   export PYENV_ROOT="$HOME/.pyenv"
   export PATH="$PYENV_ROOT/bin:$PATH"
 fi
-PSHELL=~/Programming/resources/powerline-shell/powerline-shell.py
-if [ -f $PSHELL ]; then
-    function _update_ps1() {
-        export PS1="$($PSHELL $?)"
-    }
-    export PROMPT_COMMAND="_update_ps1"
-fi
+#PSHELL=~/Programming/resources/powerline-shell/powerline-shell.py
+#if [ -f $PSHELL ]; then
+#    function _update_ps1() {
+#        export PS1="$($PSHELL $? 2> /dev/null)"
+#    }
+#    export PROMPT_COMMAND="_update_ps1"
+#fi
 

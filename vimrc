@@ -43,13 +43,18 @@
         Bundle "honza/vim-snippets"
     
     " Javascript/CSS
+        Bundle "marijnh/tern_for_vim"
         Bundle "mattn/zencoding-vim"
-        Bundle "kchmck/vim-coffee-script"
-        Bundle "groenewege/vim-less"
+        Bundle "pangloss/vim-javascript"
+        "Bundle "groenewege/vim-less"
         Bundle "ap/vim-css-color"
         Bundle "hail2u/vim-css3-syntax"
-        Bundle "briancollins/vim-jst"
-        Bundle "othree/javascript-libraries-syntax.vim"
+        "Bundle "briancollins/vim-jst"
+        "Bundle "othree/javascript-libraries-syntax.vim"
+
+    " python
+        "Bundle "kevinw/pyflakes-vim"
+        "Bundle "vim-scripts/indentpython.vim"
         
     " GO
         Bundle "golangtw/go.vim"
@@ -61,6 +66,10 @@
 
 " Plugins {
 
+    "ycm
+    " let g:ycm_filetype_specific_completion_to_disable = {'javascript': 1}
+    let g:ycm_seed_identifiers_with_syntax = 1
+
     " NerdTree
       map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
       map <leader>e :NERDTreeFind<CR>
@@ -68,7 +77,7 @@
       nmap <leader>nt :NERDTreeFind<CR>
       let NERDTreeIgnore=['\.swp$', '\.git', '\.svn']
       let NERDTreeShowHidden=1
-    
+
     " syntastic
       nmap <F7> :SyntasticCheck<CR>
       let g:syntastic_mode_map = { 'mode': 'passive',
@@ -94,12 +103,13 @@
       colorscheme solarized
       "colorscheme peaksea
 
-	" coffee
-		au BufNewFile,BufReadPost *.coffee setl shiftwidth=4 expandtab
-
     " ag
       let g:agprg = 'ag --nogroup --column'
 
+    " vim-javascript
+      let javascript_enable_domhtmlcss=1
+      let b:javascript_fold=1
+    
     " vim-less
       nnoremap ,m :w <BAR> !lessc % > %:t:r.css<CR><space>
 
@@ -114,8 +124,7 @@
       nmap <F8> :TagbarToggle<CR>
 
     " go.vim
-    " auto run `go fmt` when you save the file
-      au FileType go au BufWritePre <buffer> Fmt
+      au FileType go au BufWritePre <buffer> Fmt "auto run `go fmt` when you save the file
     
     " gotags
     " https://github.com/jstemmer/gotags
@@ -172,31 +181,37 @@ set t_vb=
 set tm=500
 
 " Coding format {
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set autoindent
 set smartindent
 set wrap
 set expandtab
 
     " HTML
-    autocmd FileType html,jst,jade set sw=2
-    autocmd FileType html,jst,jade set ts=2
-    autocmd FileType html,jst,jade set sts=2
+    autocmd FileType html,jst,jade set sw=4
+    autocmd FileType html,jst,jade set ts=4
+    autocmd FileType html,jst,jade set sts=4
     autocmd FileType html,jst,jade set textwidth=0
     
     " Javascript
-    autocmd FileType javascript set sw=2
-    autocmd FileType javascript set ts=2
-    autocmd FileType javascript set sts=2
+    autocmd FileType javascript set sw=4
+    autocmd FileType javascript set ts=4
+    autocmd FileType javascript set sts=4
     autocmd FileType javascript set textwidth=0
 
     " CSS/LESS
-    autocmd FileType css,less set sw=2
-    autocmd FileType css,less set ts=2
-    autocmd FileType css,less set sts=2
+    autocmd FileType css,less set sw=4
+    autocmd FileType css,less set ts=4
+    autocmd FileType css,less set sts=4
     autocmd FileType css,less set textwidth=0
+
+    " python
+    autocmd FileType python set sw=4
+    autocmd FileType python set ts=4
+    autocmd FileType python set sts=4
+    autocmd FileType python set textwidth=80
 
 " }
 
