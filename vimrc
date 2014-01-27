@@ -69,6 +69,7 @@
     "ycm
     " let g:ycm_filetype_specific_completion_to_disable = {'javascript': 1}
     let g:ycm_seed_identifiers_with_syntax = 1
+    let g:ycm_autoclose_preview_window_after_completion = 1
 
     " NerdTree
       map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
