@@ -43,19 +43,14 @@
         Bundle "honza/vim-snippets"
     
     " Javascript/CSS
+        Bundle "wavded/vim-stylus"
         Bundle "marijnh/tern_for_vim"
         Bundle "mattn/zencoding-vim"
         Bundle "pangloss/vim-javascript"
-        "Bundle "groenewege/vim-less"
         Bundle "ap/vim-css-color"
         Bundle "hail2u/vim-css3-syntax"
-        "Bundle "briancollins/vim-jst"
         "Bundle "othree/javascript-libraries-syntax.vim"
 
-    " python
-        "Bundle "kevinw/pyflakes-vim"
-        "Bundle "vim-scripts/indentpython.vim"
-        
     " GO
         Bundle "golangtw/go.vim"
 
@@ -203,10 +198,10 @@ set expandtab
     autocmd FileType javascript set textwidth=0
 
     " CSS/LESS
-    autocmd FileType css,less set sw=4
-    autocmd FileType css,less set ts=4
-    autocmd FileType css,less set sts=4
-    autocmd FileType css,less set textwidth=0
+    autocmd FileType css,scss,styl set sw=4
+    autocmd FileType css,scss,styl set ts=4
+    autocmd FileType css,scss,styl set sts=4
+    autocmd FileType css,scss,styl set textwidth=0
 
     " python
     autocmd FileType python set sw=4

@@ -150,8 +150,10 @@ if [ -f $Z_DIR/z.sh ]; then
 	. $Z_DIR/z.sh
 fi
 # nvm - nodejs version control 
-if [ -f ~/.nvm/nvm.sh ]; then
-	. ~/.nvm/nvm.sh
+NVM_DIR=$HOME/.nvm
+if [ -d $NVM_DIR ]; then
+	source $NVM_DIR/nvm.sh
+    source $NVM_DIR/bash_completion
 fi
 # gvm
 if [ -f $HOME/.gvm/scripts/gvm ]; then
