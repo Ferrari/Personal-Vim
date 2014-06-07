@@ -20,7 +20,6 @@
     
     " General
         Bundle "altercation/vim-colors-solarized"
-        Bundle "spf13/vim-colors"
         Bundle "rstacruz/sparkup", {'rtp': 'vim/'}
         Bundle "tpope/vim-surround"
         Bundle "scrooloose/nerdtree"
@@ -39,20 +38,21 @@
         Bundle "vim-scripts/matchit.zip"
         Bundle "MarcWeber/vim-addon-mw-utils"
         Bundle "tomtom/tlib_vim"
-        Bundle "garbas/vim-snipmate"
-        Bundle "honza/vim-snippets"
+        "Bundle "garbas/vim-snipmate"
+        "Bundle "honza/vim-snippets"
     
     " Javascript/CSS
         Bundle "wavded/vim-stylus"
         Bundle "marijnh/tern_for_vim"
-        Bundle "mattn/zencoding-vim"
+        Bundle "mattn/emmet-vim"
         Bundle "pangloss/vim-javascript"
         Bundle "ap/vim-css-color"
         Bundle "hail2u/vim-css3-syntax"
-        "Bundle "othree/javascript-libraries-syntax.vim"
+        Bundle "othree/javascript-libraries-syntax.vim"
 
     " GO
-        Bundle "golangtw/go.vim"
+        Bundle "fatih/vim-go"
+        "Bundle "golangtw/go.vim"
 
     " Others
         Bundle "ingydotnet/yaml-vim"
@@ -119,8 +119,8 @@
     " tarbar
       nmap <F8> :TagbarToggle<CR>
 
-    " go.vim
-      au FileType go au BufWritePre <buffer> Fmt "auto run `go fmt` when you save the file
+    " vim-go
+    let g:go_fmt_autosave = 1
     
     " gotags
     " https://github.com/jstemmer/gotags

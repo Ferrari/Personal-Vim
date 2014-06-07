@@ -114,6 +114,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 ## Personal Setting ##
+export EDITOR=/usr/bin/vim
 # terminal 256 color
 export TERM="screen-256color"
 if [ -f /usr/bin/tmux ]; then
