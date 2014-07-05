@@ -128,7 +128,7 @@ fi
 ## OS Setting
 OS=`uname`
 if [ $OS == "Darwin" ]; then
-    alias vim='mvim -v'
+    #alias vim='mvim -v'
     alias dissec='open -a Google\ Chrome\ Canary --args --disable-web-security'
     if [ -d /usr/local/bin ]; then
         export PATH=/usr/local/bin:"$PATH"
