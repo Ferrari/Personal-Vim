@@ -45,7 +45,8 @@
         Bundle "wavded/vim-stylus"
         Bundle "marijnh/tern_for_vim"
         Bundle "mattn/emmet-vim"
-        Bundle "pangloss/vim-javascript"
+        "Bundle "pangloss/vim-javascript"
+        Bundle "jelera/vim-javascript-syntax"
         Bundle "ap/vim-css-color"
         Bundle "hail2u/vim-css3-syntax"
         Bundle "othree/javascript-libraries-syntax.vim"
@@ -100,7 +101,6 @@
       filetype on
       set background=dark
       colorscheme solarized
-      "colorscheme peaksea
 
     " ag
       let g:agprg = 'ag --nogroup --column'
@@ -124,6 +124,7 @@
 
     " vim-go
     let g:go_fmt_autosave = 1
+    let g:go_disable_autoinstall = 0
     
     " gotags
     " https://github.com/jstemmer/gotags
