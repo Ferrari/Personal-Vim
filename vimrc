@@ -38,18 +38,16 @@
         Bundle "vim-scripts/matchit.zip"
         Bundle "MarcWeber/vim-addon-mw-utils"
         Bundle "tomtom/tlib_vim"
-        "Bundle "garbas/vim-snipmate"
-        "Bundle "honza/vim-snippets"
     
     " Javascript/CSS
         Bundle "wavded/vim-stylus"
         Bundle "marijnh/tern_for_vim"
         Bundle "mattn/emmet-vim"
-        "Bundle "pangloss/vim-javascript"
-        Bundle "jelera/vim-javascript-syntax"
+        Bundle "pangloss/vim-javascript"
         Bundle "ap/vim-css-color"
         Bundle "hail2u/vim-css3-syntax"
         Bundle "othree/javascript-libraries-syntax.vim"
+        Bundle "othree/yajs.vim"
 
     " GO
         Bundle "fatih/vim-go"
