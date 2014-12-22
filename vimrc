@@ -27,6 +27,7 @@
         Bundle "Lokaltog/vim-easymotion"
         Bundle "Yggdroot/indentLine"
         Bundle "majutsushi/tagbar"
+        Bundle "elzr/vim-json"
     
     " Programming
         Bundle "scrooloose/nerdcommenter"
@@ -154,6 +155,10 @@
       \ 'ctagsargs' : '-sort -silent'
     \ }
 
+    " json fix
+    let g:vim_json_syntax_conceal = 0
+    let g:indentLine_noConcealCursor="nc"
+
 " }
 
 filetype plugin indent on
@@ -188,15 +193,15 @@ set wrap
 set expandtab
 
     " HTML
-    autocmd FileType html,jst,jade set sw=4
-    autocmd FileType html,jst,jade set ts=4
-    autocmd FileType html,jst,jade set sts=4
+    autocmd FileType html,jst,jade set sw=2
+    autocmd FileType html,jst,jade set ts=2
+    autocmd FileType html,jst,jade set sts=2
     autocmd FileType html,jst,jade set textwidth=0
     
     " Javascript
-    autocmd FileType javascript set sw=4
-    autocmd FileType javascript set ts=4
-    autocmd FileType javascript set sts=4
+    autocmd FileType javascript set sw=2
+    autocmd FileType javascript set ts=2
+    autocmd FileType javascript set sts=2
     autocmd FileType javascript set textwidth=0
 
     " CSS/LESS
