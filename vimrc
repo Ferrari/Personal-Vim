@@ -3,7 +3,7 @@
 " Environment {
     " Basics {
         set nocompatible
-        set background=dark
+        "set background=dark
     " }
     
     " Setup Bundle Support {
@@ -65,9 +65,13 @@
 " Plugins {
 
     "ycm
-    " let g:ycm_filetype_specific_completion_to_disable = {'javascript': 1}
+    "let g:ycm_filetype_specific_completion_to_disable = {'javascript': 1}
     let g:ycm_seed_identifiers_with_syntax = 1
     let g:ycm_autoclose_preview_window_after_completion = 1
+
+    "tern
+    let g:tern_show_argument_hints='on_hold'
+    let g:tern_map_keys=1
 
     " NerdTree
       map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
