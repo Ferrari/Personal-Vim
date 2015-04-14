@@ -163,6 +163,11 @@
     let g:vim_json_syntax_conceal = 0
     let g:indentLine_noConcealCursor="nc"
 
+    " ctrlp
+    let g:ctrlp_working_path_mode = 'ra'
+    let g:ctrlp_user_command = 'find %s -type f'
+    let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+
 " }
 
 filetype plugin indent on
