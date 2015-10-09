@@ -90,6 +90,7 @@
       let g:syntastic_enable_highlighting = 0
       let g:syntastic_error_symbol = '✗'
       let g:syntastic_warning_symbol = '⚠'
+      let g:syntastic_javascript_checkers = ['standard']
     
     " gitgutter
       let g:gitgutter_enabled = 0

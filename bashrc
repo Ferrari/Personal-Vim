@@ -160,20 +160,11 @@ fi
 if [ -f $HOME/.gvm/scripts/gvm ]; then
     source $HOME/.gvm/scripts/gvm
 fi
-# RVM
-if [ -d $HOME/.rvm/bin ]; then
-    PATH=$PATH:$HOME/.rvm/bin 
-fi
 
 ## Useful Tools
 PERSONAL_DIR=~/Programming/resources
 if [ -d $PERSONAL_DIR ]; then
     export PATH="$PATH":"$PERSONAL_DIR"
-fi
-
-## node-webkit
-if [ -f /Applications/node-webkit.app/Contents/MacOS/node-webkit ]; then
-    alias nw="/Applications/node-webkit.app/Contents/MacOS/node-webkit"
 fi
 
 ## Setup path for google development
