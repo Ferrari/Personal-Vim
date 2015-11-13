@@ -156,9 +156,9 @@ if [ -d $NVM_DIR ]; then
 	source $NVM_DIR/nvm.sh
     source $NVM_DIR/bash_completion
 fi
-# gvm
-if [ -f $HOME/.gvm/scripts/gvm ]; then
-    source $HOME/.gvm/scripts/gvm
+NPMRC=~/.npmrc
+if [ -f $NPMRC ]; then
+    export NPM_TOKEN=`cat $NPMRC | sed 's/^.*authToken=\([0-9a-z\-]*\)/\1/' | head -n 1`
 fi
 
 ## Useful Tools
@@ -217,8 +217,6 @@ fi
 #    }
 #    export PROMPT_COMMAND="_update_ps1"
 #fi
-
-[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
