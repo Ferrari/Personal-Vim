@@ -150,6 +150,8 @@ Z_DIR=~/Programming/resources/z
 if [ -f $Z_DIR/z.sh ]; then
 	. $Z_DIR/z.sh
 fi
+# Go
+GOPATH=$HOME/gopath
 # nvm - nodejs version control 
 NVM_DIR=$HOME/.nvm
 if [ -d $NVM_DIR ]; then
