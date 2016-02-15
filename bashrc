@@ -151,7 +151,9 @@ if [ -f $Z_DIR/z.sh ]; then
 	. $Z_DIR/z.sh
 fi
 # Go
-GOPATH=$HOME/gopath
+export GOPATH=$HOME/gopath
+export PATH=$PATH:$GOPATH/bin
+
 # nvm - nodejs version control 
 NVM_DIR=$HOME/.nvm
 if [ -d $NVM_DIR ]; then
