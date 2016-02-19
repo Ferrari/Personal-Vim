@@ -23,7 +23,8 @@
         Bundle "rstacruz/sparkup", {'rtp': 'vim/'}
         Bundle "tpope/vim-surround"
         Bundle "scrooloose/nerdtree"
-        Bundle "bling/vim-airline"
+        Bundle "vim-airline/vim-airline"
+        Bundle "vim-airline/vim-airline-themes"
         Bundle "Lokaltog/vim-easymotion"
         Bundle "Yggdroot/indentLine"
         Bundle "majutsushi/tagbar"
