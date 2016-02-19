@@ -52,11 +52,13 @@
 
     " GO
         Bundle "fatih/vim-go"
-        "Bundle "golangtw/go.vim"
     
     " Swift
         Bundle "Keithbsmiley/swift.vim"
 
+    " Rust
+        Bundle "rust-lang/rust.vim" 
+    
     " Others
         Bundle "ingydotnet/yaml-vim"
         Bundle "digitaltoad/vim-jade"
