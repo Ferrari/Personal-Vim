@@ -53,11 +53,13 @@
 
     " GO
         Bundle "fatih/vim-go"
-        "Bundle "golangtw/go.vim"
     
     " Swift
         Bundle "Keithbsmiley/swift.vim"
 
+    " Rust
+        Bundle "rust-lang/rust.vim" 
+    
     " Others
         Bundle "ingydotnet/yaml-vim"
         Bundle "digitaltoad/vim-jade"
@@ -129,6 +131,7 @@
 
     " vim-go
     let g:go_fmt_autosave = 1
+    let g:go_fmt_command = "goimports"
     let g:go_disable_autoinstall = 0
     
     " gotags

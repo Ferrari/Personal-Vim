@@ -152,6 +152,7 @@ if [ -f $Z_DIR/z.sh ]; then
 fi
 # Go
 export GOPATH=$HOME/gopath
+export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOPATH/bin
 
 # nvm - nodejs version control 
@@ -224,3 +225,9 @@ fi
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/sylee/google-cloud-sdk/path.bash.inc'
+
+# The next line enables shell command completion for gcloud.
+source '/Users/sylee/google-cloud-sdk/completion.bash.inc'
