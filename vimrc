@@ -233,8 +233,8 @@ set expandtab
 set number
 set nocompatible
 set modelines=0 "prevent security exploits in modelines
-set ttyfast
 set ruler
+set ttyfast
 set laststatus=2
 set foldmethod=marker
 

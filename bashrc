@@ -117,8 +117,8 @@ fi
 export EDITOR=/usr/bin/vim
 # terminal 256 color
 export TERM="screen-256color"
-if [ -f /usr/bin/tmux ]; then
-	alias tmux="TERM=screen-256color-bce tmux"
+if [ -f /usr/bin/tmux ] || [ -f /usr/local/bin/tmux ]; then
+	alias tmux="TERM=screen-256color-bce tmux -u"
 fi
 
 if [ -d /usr/local/sbin ]; then
