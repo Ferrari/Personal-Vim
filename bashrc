@@ -158,11 +158,10 @@ if [ -f $Z_DIR/z.sh ]; then
 	. $Z_DIR/z.sh
 fi
 # Go
-if [ -d $HOME/Programming/resources/gopath ]; then
+if [ -d $HOME/Programming/resources/gopath ] && [ -d $HOME/Programming/resources/gopath/bin ]; then
     export GOPATH=$HOME/Programming/resources/gopath
-fi
-if [ -d $GOPATH/bin ]; then
-    export PATH=$PATH:$GOPATH/bin
+    export GOBIN=$GOPATH/bin
+    export PATH=$PATH:$GOBIN
 fi
 
 # nvm - nodejs version control 
