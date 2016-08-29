@@ -158,9 +158,12 @@ if [ -f $Z_DIR/z.sh ]; then
 	. $Z_DIR/z.sh
 fi
 # Go
-export GOPATH=$HOME/gopath
-export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOPATH/bin
+if [ -d $HOME/Programming/resources/gopath ]; then
+    export GOPATH=$HOME/Programming/resources/gopath
+fi
+if [ -d $GOPATH/bin ]; then
+    export PATH=$PATH:$GOPATH/bin
+fi
 
 # nvm - nodejs version control 
 NVM_DIR=$HOME/.nvm
@@ -187,34 +190,6 @@ if [ -d $DEP_DIR ]; then
 	export PATH="$PATH":"$DEP_DIR"
 fi
 
-APP_DIR=~/Programming/resources/google_appengine
-if [ -d $APP_DIR ]; then
-    export PATH="$PATH":"$APP_DIR"
-fi
-
-OS=`uname`
-if [ $OS = "Darwin" ]; then
-    if [ -x "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ]; then
-        export PATH="$PATH":"/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin"
-    fi
-fi
-
-## jenv - java environment
-if [ -f /usr/local/bin/jenv ]; then
-  export PATH="$HOME/.jenv/bin:$PATH"
-  eval "$(jenv init -)"
-fi
-
-## android
-ANDROID_TOOL=~/Programming/adt-bundle-mac-x86_64-20130219/sdk/tools
-ANDROID_PLATFORM=~/Programming/adt-bundle-mac-x86_64-20130219/sdk/platform-tools
-if [ -d $ANDROID_TOOL ]; then 
-    export PATH="$PATH":"$ANDROID_TOOL"
-fi
-if [ -d $ANDROID_PLATFORM ]; then 
-    export PATH="$PATH":"$ANDROID_PLATFORM"
-fi
-
 ## python setting
 if [ -d $HOME/.pyenv ]; then
   export PYENV_ROOT="$HOME/.pyenv"
@@ -222,13 +197,6 @@ if [ -d $HOME/.pyenv ]; then
   eval "$(pyenv init -)"
   eval "$(pyenv virtualenv-init -)"
 fi
-#PSHELL=~/Programming/resources/powerline-shell/powerline-shell.py
-#if [ -f $PSHELL ]; then
-#    function _update_ps1() {
-#        export PS1="$($PSHELL $? 2> /dev/null)"
-#    }
-#    export PROMPT_COMMAND="_update_ps1"
-#fi
 
 ### Added by the Heroku Toolbelt
 if [ -d /usr/local/heroku/bin ]; then
