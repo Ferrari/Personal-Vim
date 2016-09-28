@@ -7,7 +7,7 @@ Migrate from [spf13-vim](https://github.com/spf13/spf13-vim)
 ## Install
 
 ```
-curl https://github.com/Ferrari/dotfiles/raw/master/bootstrap.sh -L -o - | sh
+curl https://github.com/Ferrari/dotfiles/raw/master/bootstrap.sh -L -o - | bash
 ```
 
 ## Update
