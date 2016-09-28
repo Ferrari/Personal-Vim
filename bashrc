@@ -142,6 +142,7 @@ if [ $OS == "Darwin" ]; then
         export PATH=/usr/local/bin:"$PATH"
     fi
     export CLICOLOR=1
+    export EVENT_NOKQUEUE=1
 fi
 
 ## Useful alias

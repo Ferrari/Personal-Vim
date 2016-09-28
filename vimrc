@@ -94,6 +94,10 @@
       let g:syntastic_error_symbol = '✗'
       let g:syntastic_warning_symbol = '⚠'
       let g:syntastic_javascript_checkers = ['standard']
+
+    " setup standard style checker
+    "autocmd bufwritepost *.js silent !standard-format -w %
+    "set autoread
     
     " gitgutter
       let g:gitgutter_enabled = 0
@@ -240,6 +244,7 @@ set ruler
 set ttyfast
 set laststatus=2
 set foldmethod=marker
+set clipboard=unnamed
 
 " Split windows
 nnoremap <leader>w <C-w>v<C-w>l
