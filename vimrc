@@ -16,7 +16,7 @@
     " Deps 
         Bundle "gmarik/vundle"
         Bundle "rking/ag.vim"
-        Bundle "kien/ctrlp.vim"
+        Bundle "ctrlpvim/ctrlp.vim"
     
     " General
         Bundle "altercation/vim-colors-solarized"
@@ -174,8 +174,10 @@
 
     " ctrlp
     let g:ctrlp_working_path_mode = 'ra'
-    let g:ctrlp_user_command = 'find %s -type f'
     let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+    "let g:ctrlp_user_command = 'find %s -type f'
+    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+    let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 " }
 
