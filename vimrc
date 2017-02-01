@@ -29,6 +29,10 @@
         Bundle "Yggdroot/indentLine"
         Bundle "majutsushi/tagbar"
         Bundle "elzr/vim-json"
+
+    " Snippet
+        Bundle "SirVer/ultisnips"
+        Bundle "justinj/vim-react-snippets"
     
     " Programming
         Bundle "scrooloose/nerdcommenter"
@@ -45,24 +49,20 @@
         Bundle "wavded/vim-stylus"
         Bundle "marijnh/tern_for_vim"
         Bundle "mattn/emmet-vim"
-        Bundle "pangloss/vim-javascript"
         Bundle "ap/vim-css-color"
         Bundle "hail2u/vim-css3-syntax"
         Bundle "othree/javascript-libraries-syntax.vim"
         Bundle "othree/yajs.vim"
+        Bundle "mxw/vim-jsx"
 
     " GO
         Bundle "fatih/vim-go"
     
-    " Swift
-        Bundle "Keithbsmiley/swift.vim"
-
     " Rust
         Bundle "rust-lang/rust.vim" 
     
     " Others
         Bundle "ingydotnet/yaml-vim"
-        Bundle "digitaltoad/vim-jade"
 " }
 
 " Plugins {
@@ -93,7 +93,7 @@
       let g:syntastic_enable_highlighting = 0
       let g:syntastic_error_symbol = '✗'
       let g:syntastic_warning_symbol = '⚠'
-      let g:syntastic_javascript_checkers = ['standard']
+      let g:syntastic_javascript_checkers = ['eslint']
 
     " setup standard style checker
     "autocmd bufwritepost *.js silent !standard-format -w %
@@ -119,14 +119,13 @@
     " vim-javascript
       let javascript_enable_domhtmlcss=1
       let b:javascript_fold=1
+
+    " react
+      let g:jsx_ext_required = 0 " Allow JSX in normal JS files
     
     " vim-less
       nnoremap ,m :w <BAR> !lessc % > %:t:r.css<CR><space>
 
-    " Snipmate
-      ino <c-j> <c-r>=snipMate#TriggerSnippet()<cr>
-      snor <c-j> <esc>i<right><c-r>=snipMate#TriggerSnippet()<cr>
-    
     " vim-airline
       let g:airline_theme='simple'
 
@@ -134,9 +133,9 @@
       nmap <F8> :TagbarToggle<CR>
 
     " vim-go
-    let g:go_fmt_autosave = 1
-    let g:go_fmt_command = "goimports"
-    let g:go_disable_autoinstall = 0
+      let g:go_fmt_autosave = 1
+      let g:go_fmt_command = "goimports"
+      let g:go_disable_autoinstall = 0
     
     " gotags
     " https://github.com/jstemmer/gotags
