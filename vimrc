@@ -173,7 +173,7 @@
 
     " ctrlp
     let g:ctrlp_working_path_mode = 'ra'
-    let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+    let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|node_modules)$'
     "let g:ctrlp_user_command = 'find %s -type f'
     let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
     let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
