@@ -160,8 +160,8 @@ if [ -f $Z_DIR/z.sh ]; then
 	. $Z_DIR/z.sh
 fi
 # Go
-if [ -d $HOME/Programming/resources/gopath ] && [ -d $HOME/Programming/resources/gopath/bin ]; then
-    export GOPATH=$HOME/Programming/resources/gopath
+if [ -d $HOME/mygo ] && [ -d $HOME/mygo/bin ]; then
+    export GOPATH=$HOME/mygo
     export GOBIN=$GOPATH/bin
     export PATH=$PATH:$GOBIN
 fi
