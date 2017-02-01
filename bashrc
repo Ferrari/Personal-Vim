@@ -203,3 +203,7 @@ fi
 if [ -d /usr/local/heroku/bin ]; then
     export PATH="/usr/local/heroku/bin:$PATH"
 fi
+
+if [ -d $HOME/.yarn/bin ]; then
+    export PATH="$HOME/.yarn/bin:$PATH"
+fi
