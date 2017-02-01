@@ -15,7 +15,7 @@
 " Bundles {
     " Deps 
         Bundle "gmarik/vundle"
-        Bundle "rking/ag.vim"
+        Bundle "mileszs/ack.vim"
         Bundle "ctrlpvim/ctrlp.vim"
     
     " General
@@ -178,6 +178,10 @@
     let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
     let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
+    " ack
+    if executable('ag')
+        let g:ackprg = 'ag --vimgrep'
+    endif
 " }
 
 filetype plugin indent on
@@ -203,9 +207,9 @@ set t_vb=
 set tm=500
 
 " Coding format {
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set autoindent
 set smartindent
 set wrap
@@ -224,9 +228,9 @@ set expandtab
     autocmd FileType javascript set textwidth=0
 
     " CSS/LESS
-    autocmd FileType css,scss,styl set sw=4
-    autocmd FileType css,scss,styl set ts=4
-    autocmd FileType css,scss,styl set sts=4
+    autocmd FileType css,scss,styl set sw=2
+    autocmd FileType css,scss,styl set ts=2
+    autocmd FileType css,scss,styl set sts=2
     autocmd FileType css,scss,styl set textwidth=0
 
     " python
