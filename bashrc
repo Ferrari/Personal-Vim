@@ -170,11 +170,17 @@ fi
 NVM_DIR=$HOME/.nvm
 if [ -d $NVM_DIR ]; then
 	source $NVM_DIR/nvm.sh
-    source $NVM_DIR/bash_completion
+  source $NVM_DIR/bash_completion
 fi
 NPMRC=~/.npmrc
 if [ -f $NPMRC ]; then
-    export NPM_TOKEN=`cat $NPMRC | sed 's/^.*authToken=\([0-9a-z\-]*\)/\1/' | head -n 1`
+  export NPM_TOKEN=`cat $NPMRC | sed 's/^.*authToken=\([0-9a-z\-]*\)/\1/' | head -n 1`
+fi
+
+# rustup
+RUSTUP=$HOME/.cargo/env
+if [ -f $RUSTUP ]; then
+  source $RUSTUP
 fi
 
 ## Useful Tools
