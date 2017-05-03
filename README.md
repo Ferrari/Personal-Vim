@@ -12,15 +12,20 @@ curl https://github.com/Ferrari/dotfiles/raw/master/bootstrap.sh -L -o - | bash
 
 ## Update
 
+**vim**
 ```
 vim +BundleInstall! +BundleClean! +q
 ```
+
+**tmux**
+`prefix`(tmux) + I 
 
 If you want to use [syntastic](https://github.com/scrooloose/syntastic) to check syntax, make sure you also have the tool. 
 Ex: I use JS, so `npm install -g jshint` first!
 
 ## ChangeLog
 
+* v2.0.0 - Setup [tmux plugin manager](https://github.com/tmux-plugins/tpm)
 * v1.7.0 - Use [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) replace ack
 * v1.6.0 - Some golang twist by [golang vim](http://blog.hsatac.net/2013/08/my-vimrc-for-golang/)
 * v1.5.0 - Change default coding indent as 2
