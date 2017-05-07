@@ -2,7 +2,7 @@
 
 endpath="$HOME/.ferrari"
 backuppath="$endpath/bak"
-bundlepath="$endpath/.vim/bundle"
+autopath="$endpath/.vim/autoload"
 checkfiles=('.vim' '.vimrc' '.gvimrc' '.bashrc' '.tmux-conf')
 
 msg() {
@@ -51,7 +51,6 @@ create_symlinks() {
 # Setup Directory
 msg "Setup personal dotfiles..."
 git clone --recursive https://github.com/Ferrari/dotfiles.git $endpath
-mkdir -p $bundlepath
 mkdir -p $backuppath
 
 # Backup existing .vim stuff
@@ -62,10 +61,14 @@ do_backup
 msg "create symlink..."
 create_symlinks
 
-msg "Installing Vundle"
-if [ ! -d "$bundlepath/vundle" ]; then
-  git clone http://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle
+msg "Installing vim.plug"
+if [ ! -d "$autopath" ]; then
+  mkdir -p $autopath
 fi
 
-msg "installing plugins using Vundle"
-vim +BundleInstall! +BundleClean +q
+if [ ! -f "$autopath"/plug.vim ]; then
+  curl -fLo "$authpath/plug.vim" https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+fi
+
+msg "installing plugins using vim.plug"
+vim +PlugInstall! +PlugClean! +q

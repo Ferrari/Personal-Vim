@@ -3,66 +3,74 @@
 " Environment {
     " Basics {
         set nocompatible
-        "set background=dark
     " }
     
     " Setup Bundle Support {
-        set rtp+=~/.vim/bundle/vundle
-        call vundle#rc()
+        "set rtp+=~/.vim/bundle/vundle
+        "call vundle#rc()
     " }
+
 " }
 
-" Bundles {
+" Setup vim.plug {
+    call plug#begin('~/.vim/plugged')
+" }
+
+" Plugs {
     " Deps 
-        Bundle "gmarik/vundle"
-        Bundle "mileszs/ack.vim"
-        Bundle "ctrlpvim/ctrlp.vim"
+        Plug 'gmarik/vundle'
+        Plug 'mileszs/ack.vim'
+        Plug 'ctrlpvim/ctrlp.vim'
     
     " General
-        Bundle "altercation/vim-colors-solarized"
-        Bundle "rstacruz/sparkup", {'rtp': 'vim/'}
-        Bundle "tpope/vim-surround"
-        Bundle "scrooloose/nerdtree"
-        Bundle "vim-airline/vim-airline"
-        Bundle "vim-airline/vim-airline-themes"
-        Bundle "Lokaltog/vim-easymotion"
-        Bundle "Yggdroot/indentLine"
-        Bundle "majutsushi/tagbar"
-        Bundle "elzr/vim-json"
+        Plug 'altercation/vim-colors-solarized'
+        Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
+        Plug 'tpope/vim-surround'
+        Plug 'scrooloose/nerdtree'
+        Plug 'vim-airline/vim-airline'
+        Plug 'vim-airline/vim-airline-themes'
+        Plug 'Lokaltog/vim-easymotion'
+        Plug 'Yggdroot/indentLine'
+        Plug 'majutsushi/tagbar'
+        Plug 'elzr/vim-json'
 
     " Snippet
-        Bundle "SirVer/ultisnips"
-        Bundle "justinj/vim-react-snippets"
+        Plug 'SirVer/ultisnips'
+        Plug 'justinj/vim-react-snippets'
     
-    " Programming
-        Bundle "scrooloose/nerdcommenter"
-        Bundle "scrooloose/syntastic"
-        Bundle "motemen/git-vim"
-        Bundle "airblade/vim-gitgutter"
-        Bundle "Valloric/YouCompleteMe"
-        Bundle "Raimondi/delimitMate"
-        Bundle "vim-scripts/matchit.zip"
-        Bundle "MarcWeber/vim-addon-mw-utils"
-        Bundle "tomtom/tlib_vim"
+    " Program'ing
+        Plug 'scrooloose/nerdcommenter'
+        Plug 'scrooloose/syntastic'
+        Plug 'motemen/git-vim'
+        Plug 'airblade/vim-gitgutter'
+        Plug 'Valloric/YouCompleteMe'
+        Plug 'Raimondi/delimitMate'
+        Plug 'vim-scripts/matchit.zip'
+        Plug 'MarcWeber/vim-addon-mw-utils'
+        Plug 'tomtom/tlib_vim'
     
-    " Javascript/CSS
-        Bundle "wavded/vim-stylus"
-        Bundle "marijnh/tern_for_vim"
-        Bundle "mattn/emmet-vim"
-        Bundle "ap/vim-css-color"
-        Bundle "hail2u/vim-css3-syntax"
-        Bundle "othree/javascript-libraries-syntax.vim"
-        Bundle "othree/yajs.vim"
-        Bundle "mxw/vim-jsx"
+    " Javascr'pt/CSS
+        Plug 'wavded/vim-stylus'
+        Plug 'marijnh/tern_for_vim'
+        Plug 'mattn/emmet-vim'
+        Plug 'ap/vim-css-color'
+        Plug 'hail2u/vim-css3-syntax'
+        Plug 'othree/javascript-libraries-syntax.vim'
+        Plug 'othree/yajs.vim'
+        Plug 'mxw/vim-jsx'
 
     " GO
-        Bundle "fatih/vim-go"
+        Plug 'fatih/vim-go'
     
     " Rust
-        Bundle "rust-lang/rust.vim" 
+        Plug 'rust-lang/rust.vim'
     
     " Others
-        Bundle "ingydotnet/yaml-vim"
+        Plug 'ingydotnet/yaml-vim'
+" }
+
+" Initialize plugin {
+  call plug#end()
 " }
 
 " Plugins {
