@@ -67,7 +67,7 @@ if [ ! -d "$autopath" ]; then
 fi
 
 if [ ! -f "$autopath"/plug.vim ]; then
-  curl -fLo "$authpath/plug.vim" https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  curl -fLo "$autopath/plug.vim" https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
 msg "installing plugins using vim.plug"
