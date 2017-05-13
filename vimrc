@@ -1,15 +1,7 @@
 " ferrari personal vimrc
 
-" Environment {
-    " Basics {
-        set nocompatible
-    " }
-    
-    " Setup Bundle Support {
-        "set rtp+=~/.vim/bundle/vundle
-        "call vundle#rc()
-    " }
-
+" Basics {
+    set nocompatible
 " }
 
 " Setup vim.plug {
@@ -64,6 +56,7 @@
     
     " Rust
         Plug 'rust-lang/rust.vim'
+        Plug 'racer-rust/vim-racer'
     
     " Others
         Plug 'ingydotnet/yaml-vim'
@@ -178,6 +171,7 @@
     " json fix
     let g:vim_json_syntax_conceal = 0
     let g:indentLine_noConcealCursor="nc"
+    let g:indentLine_enabled = 0
 
     " ctrlp
     let g:ctrlp_working_path_mode = 'ra'
