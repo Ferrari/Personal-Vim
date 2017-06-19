@@ -30,7 +30,7 @@
         Plug 'SirVer/ultisnips'
         Plug 'justinj/vim-react-snippets'
     
-    " Program'ing
+    " Programming
         Plug 'scrooloose/nerdcommenter'
         Plug 'scrooloose/syntastic'
         Plug 'motemen/git-vim'
@@ -50,6 +50,9 @@
         Plug 'othree/javascript-libraries-syntax.vim'
         Plug 'othree/yajs.vim'
         Plug 'mxw/vim-jsx'
+        Plug 'mitermayer/vim-prettier', {
+              \ 'do': 'npm install',
+              \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss'] }
 
     " GO
         Plug 'fatih/vim-go'
@@ -96,9 +99,18 @@
       let g:syntastic_warning_symbol = '⚠'
       let g:syntastic_javascript_checkers = ['eslint']
 
-    " setup standard style checker
-    "autocmd bufwritepost *.js silent !standard-format -w %
-    "set autoread
+    " prettier
+      let g:prettier#autoformat = 0
+      autocmd BufWritePre *.js,*.css,*.scss,*.less Prettier
+      let g:prettier#config#print_width = 80
+      let g:prettier#config#tab_width = 2
+      let g:prettier#config#use_tabs = 'false'
+      let g:prettier#config#semi = 'false'
+      let g:prettier#config#single_quote = 'true'
+      let g:prettier#config#bracket_spacing = 'true'
+      let g:prettier#config#jsx_bracket_same_line = 'false' 
+      let g:prettier#config#trailing_comma = 'es5'
+      let g:prettier#config#parser = 'babylon'
     
     " gitgutter
       let g:gitgutter_enabled = 0
