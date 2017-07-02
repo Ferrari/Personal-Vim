@@ -32,7 +32,7 @@
     
     " Programming
         Plug 'scrooloose/nerdcommenter'
-        Plug 'scrooloose/syntastic'
+        Plug 'w0rp/ale'
         Plug 'motemen/git-vim'
         Plug 'airblade/vim-gitgutter'
         Plug 'Valloric/YouCompleteMe'
@@ -88,16 +88,16 @@
       let NERDTreeIgnore=['\.swp$', '\.git', '\.svn']
       let NERDTreeShowHidden=1
 
-    " syntastic
-      nmap <F7> :SyntasticCheck<CR>
-      let g:syntastic_mode_map = { 'mode': 'passive',
-                                 \ 'active_filetypes': [],
-                                 \ 'passive_filetypes': [] }
-      let g:syntastic_loc_list_height = 5
-      let g:syntastic_enable_highlighting = 0
-      let g:syntastic_error_symbol = '✗'
-      let g:syntastic_warning_symbol = '⚠'
-      let g:syntastic_javascript_checkers = ['eslint']
+    " ale
+      let g:ale_sign_error = '✗'
+      let g:ale_sign_warning = '⚠'
+      let g:airline#extensions#ale#enabled = 1
+      let g:ale_lint_on_text_changed = 'never'
+      let g:ale_lint_on_enter = 0
+      let g:ale_fixers = {'javascript': ['prettier_standard']}
+      let g:ale_linters = {'javascript': ['']}
+      let g:ale_lint_on_save = 0
+      let g:ale_fix_on_save = 0
 
     " prettier
       let g:prettier#autoformat = 0
