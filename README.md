@@ -23,6 +23,9 @@ vim +BundleInstall! +BundleClean! +q
 If you want to use [syntastic](https://github.com/scrooloose/syntastic) to check syntax, make sure you also have the tool. 
 Ex: I use JS, so `npm install -g jshint` first!
 
+**bash-it**
+https://github.com/Bash-it/bash-it
+
 ## ChangeLog
 
 * v2.0.0 - Setup [tmux plugin manager](https://github.com/tmux-plugins/tpm)

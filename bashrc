@@ -154,11 +154,6 @@ function openGithub {
 }
 alias ghopen="openGithub"
 
-## Programming Tools
-Z_DIR=~/Programming/resources/z
-if [ -f $Z_DIR/z.sh ]; then
-	. $Z_DIR/z.sh
-fi
 # Go
 if [ -d $HOME/mygo ] && [ -d $HOME/mygo/bin ]; then
     export GOPATH=$HOME/mygo
