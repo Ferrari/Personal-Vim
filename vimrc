@@ -35,7 +35,8 @@
         Plug 'w0rp/ale'
         Plug 'motemen/git-vim'
         Plug 'airblade/vim-gitgutter'
-        Plug 'Valloric/YouCompleteMe'
+        "Plug 'Valloric/YouCompleteMe'
+        Plug 'Shougo/neocomplete.vim'
         Plug 'Raimondi/delimitMate'
         Plug 'vim-scripts/matchit.zip'
         Plug 'MarcWeber/vim-addon-mw-utils'
@@ -49,7 +50,6 @@
         Plug 'hail2u/vim-css3-syntax'
         Plug 'othree/javascript-libraries-syntax.vim'
         Plug 'othree/yajs.vim'
-        Plug 'mxw/vim-jsx'
         Plug 'mitermayer/vim-prettier', {
               \ 'do': 'npm install',
               \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss'] }
