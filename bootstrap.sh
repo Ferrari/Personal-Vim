@@ -67,8 +67,11 @@ if [ ! -d "$autopath" ]; then
 fi
 
 if [ ! -f "$autopath"/plug.vim ]; then
-  curl -fLo "$autopath/plug.vim" https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  curl -fLo "$autopath/plug.vim" --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
 msg "installing plugins using vim.plug"
 vim +PlugInstall! +PlugClean! +q
+
+# setup tpm
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm

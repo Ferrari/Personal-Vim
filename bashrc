@@ -162,10 +162,10 @@ if [ -d $HOME/mygo ] && [ -d $HOME/mygo/bin ]; then
 fi
 
 # nvm - nodejs version control 
-NVM_DIR=$HOME/.nvm
-if [ -d $NVM_DIR ]; then
-	source $NVM_DIR/nvm.sh
-  source $NVM_DIR/bash_completion
+export NVM_DIR="$HOME/.nvm"
+export NVM_FILE=/usr/local/opt/nvm/nvm.sh
+if [ -f $NVM_FILE ]; then
+	source $NVM_FILE
 fi
 NPMRC=~/.npmrc
 if [ -f $NPMRC ]; then
@@ -182,6 +182,10 @@ fi
 PERSONAL_DIR=~/Programming/resources
 if [ -d $PERSONAL_DIR ]; then
     export PATH="$PATH":"$PERSONAL_DIR"
+fi
+Z_FILE=/usr/local/etc/profile.d/z.sh
+if [ -f $Z_FILE ]; then
+  source $Z_FILE
 fi
 
 ## Setup path for google development
