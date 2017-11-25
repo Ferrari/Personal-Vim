@@ -156,9 +156,13 @@ alias ghopen="openGithub"
 
 # Go
 if [ -d $HOME/mygo ] && [ -d $HOME/mygo/bin ]; then
-    export GOPATH=$HOME/mygo
-    export GOBIN=$GOPATH/bin
-    export PATH=$PATH:$GOBIN
+  export GOPATH=$HOME/mygo
+  export GOBIN=$GOPATH/bin
+  export PATH=$PATH:$GOBIN
+elif [ -d $WORKDIR/mygo ] && [ -d $WORKDIR/mygo/bin ]; then
+  export GOPATH=$WORKDIR/mygo
+  export GOBIN=$GOPATH/bin
+  export PATH=$PATH:$GOBIN
 fi
 
 # nvm - nodejs version control 
@@ -176,6 +180,9 @@ fi
 RUSTUP=$HOME/.cargo/env
 if [ -f $RUSTUP ]; then
   source $RUSTUP
+fi
+if [ -d $HOME/.cargo/bin ]; then
+  export PATH="$HOME/.cargo/bin:$PATH"
 fi
 
 ## Useful Tools
