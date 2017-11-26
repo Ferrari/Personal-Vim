@@ -155,7 +155,7 @@ function openGithub {
 alias ghopen="openGithub"
 
 ## Programming Tools
-Z_DIR=~/Programming/resources/z
+Z_DIR=~/Resources/z
 if [ -f $Z_DIR/z.sh ]; then
 	. $Z_DIR/z.sh
 fi
@@ -184,17 +184,9 @@ if [ -f $RUSTUP ]; then
 fi
 
 ## Useful Tools
-PERSONAL_DIR=~/Programming/resources
+PERSONAL_DIR=~/Resources
 if [ -d $PERSONAL_DIR ]; then
     export PATH="$PATH":"$PERSONAL_DIR"
-fi
-
-## Setup path for google development
-## depot_tools for chrome 
-## appengine for appengine
-DEP_DIR=~/Programming/resources/depot_tools
-if [ -d $DEP_DIR ]; then
-	export PATH="$PATH":"$DEP_DIR"
 fi
 
 ## python setting
