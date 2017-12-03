@@ -48,7 +48,7 @@
         Plug 'mattn/emmet-vim'
         Plug 'ap/vim-css-color'
         Plug 'hail2u/vim-css3-syntax'
-        Plug 'othree/javascript-libraries-syntax.vim'
+        Plug 'pangloss/vim-javascript'
         Plug 'othree/yajs.vim'
         Plug 'mitermayer/vim-prettier', {
               \ 'do': 'npm install',
