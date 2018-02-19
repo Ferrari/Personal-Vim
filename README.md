@@ -13,8 +13,10 @@ curl https://github.com/Ferrari/dotfiles/raw/master/bootstrap.sh -L -o - | bash
 ## Update
 
 **vim**
+
+Thanks for [vim-plug](https://github.com/junegunn/vim-plug) vim plugin manager, just run follow command is enough.
 ```
-vim +BundleInstall! +BundleClean! +q
+vim +PlugInstall! +PlugClean! +q
 ```
 
 **tmux**
@@ -28,6 +30,7 @@ https://github.com/Bash-it/bash-it
 
 ## ChangeLog
 
+* v2.1.0 - Setup [alacritty](https://github.com/jwilm/alacritty) config file if exists
 * v2.0.0 - Setup [tmux plugin manager](https://github.com/tmux-plugins/tpm)
 * v1.7.0 - Use [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) replace ack
 * v1.6.0 - Some golang twist by [golang vim](http://blog.hsatac.net/2013/08/my-vimrc-for-golang/)
