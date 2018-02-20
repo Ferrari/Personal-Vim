@@ -173,10 +173,14 @@ fi
 
 # nvm - nodejs version control 
 export NVM_DIR="$HOME/.nvm"
-export NVM_FILE=/usr/local/opt/nvm/nvm.sh
+export NVM_FILE="/usr/local/opt/nvm/nvm.sh"
 if [ -f $NVM_FILE ]; then
 	source $NVM_FILE
 fi
+if [ -s "$NVM_DIR/bash_completion" ]; then
+  source "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+fi
+
 NPMRC=~/.npmrc
 if [ -f $NPMRC ]; then
   export NPM_TOKEN=`cat $NPMRC | sed 's/^.*authToken=\([0-9a-z\-]*\)/\1/' | head -n 1`
