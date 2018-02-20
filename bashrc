@@ -173,7 +173,7 @@ fi
 
 # nvm - nodejs version control 
 export NVM_DIR="$HOME/.nvm"
-export NVM_FILE="/usr/local/opt/nvm/nvm.sh"
+export NVM_FILE="$NVM_DIR/nvm.sh"
 if [ -f $NVM_FILE ]; then
 	source $NVM_FILE
 fi
