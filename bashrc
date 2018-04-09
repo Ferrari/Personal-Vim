@@ -177,7 +177,10 @@ export NVM_FILE="$NVM_DIR/nvm.sh"
 if [ -f $NVM_FILE ]; then
 	source $NVM_FILE
 fi
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+if [ -s "$NVM_DIR/bash_completion" ]; then
+  source "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+fi
+
 NPMRC=~/.npmrc
 if [ -f $NPMRC ]; then
   export NPM_TOKEN=`cat $NPMRC | sed 's/^.*authToken=\([0-9a-z\-]*\)/\1/' | head -n 1`
