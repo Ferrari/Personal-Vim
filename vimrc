@@ -10,7 +10,7 @@
 
 " Plugs {
     " Deps 
-        Plug 'gmarik/vundle'
+        "Plug 'gmarik/vundle'
         Plug 'mileszs/ack.vim'
         Plug 'ctrlpvim/ctrlp.vim'
     
@@ -44,7 +44,7 @@
     
     " Javascr'pt/CSS
         Plug 'wavded/vim-stylus'
-        Plug 'marijnh/tern_for_vim'
+        "Plug 'marijnh/tern_for_vim'
         Plug 'mattn/emmet-vim'
         Plug 'ap/vim-css-color'
         Plug 'hail2u/vim-css3-syntax'
