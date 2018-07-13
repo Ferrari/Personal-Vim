@@ -265,6 +265,11 @@ set expandtab
     autocmd FileType python set sts=4
     autocmd FileType python set textwidth=80
 
+    " rust
+    autocmd FileType rust set sw=2
+    autocmd FileType rust set ts=2
+    autocmd FileType rust set sts=2
+    autocmd FileType rust set textwidth=0
 " }
 
 " editor setting
