@@ -186,6 +186,12 @@ if [ -f $NPMRC ]; then
   export NPM_TOKEN=`cat $NPMRC | sed 's/^.*authToken=\([0-9a-z\-]*\)/\1/' | head -n 1`
 fi
 
+# gvm
+GVM=$HOME/.gvm/scripts/gvm
+if [ -f $GVM ]; then
+  source $GVM
+fi
+
 # rustup
 RUSTUP=$HOME/.cargo/env
 if [ -f $RUSTUP ]; then
