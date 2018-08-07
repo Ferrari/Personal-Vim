@@ -36,7 +36,6 @@
         Plug 'motemen/git-vim'
         Plug 'airblade/vim-gitgutter'
         "Plug 'Valloric/YouCompleteMe'
-        "Plug 'Shougo/neocomplete.vim'
         Plug 'Raimondi/delimitMate'
         Plug 'vim-scripts/matchit.zip'
         Plug 'MarcWeber/vim-addon-mw-utils'
@@ -65,13 +64,9 @@
         Plug 'ingydotnet/yaml-vim'
 
     " setup deoplete
-    if has('nvim')
-      Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-    else
-      Plug 'Shougo/deoplete.nvim'
-      Plug 'roxma/nvim-yarp'
-      Plug 'roxma/vim-hug-neovim-rpc'
-    endif
+        Plug 'Shougo/deoplete.nvim'
+        Plug 'roxma/nvim-yarp'
+        Plug 'roxma/vim-hug-neovim-rpc'
 " }
 
 " Initialize plugin {
