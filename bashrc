@@ -193,6 +193,12 @@ if [ -d $HOME/.cargo/bin ]; then
   export PATH="$HOME/.cargo/bin:$PATH"
 fi
 
+# gvm
+GVM=$HOME/.gvm/scripts/gvm
+if [ -f $GVM ]; then 
+  source $GVM
+fi
+
 ## Useful Tools
 PERSONAL_DIR=~/Resources
 if [ -d $PERSONAL_DIR ]; then
