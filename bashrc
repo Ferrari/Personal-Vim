@@ -161,14 +161,12 @@ if [ -f $Z_DIR/z.sh ]; then
 fi
 
 # Go
-if [ -d $HOME/mygo ] && [ -d $HOME/mygo/bin ]; then
+if [ -d $HOME/mygo ]; then
   export GOPATH=$HOME/mygo
-  export GOBIN=$GOPATH/bin
-  export PATH=$PATH:$GOBIN
-elif [ -d $WORKDIR/mygo ] && [ -d $WORKDIR/mygo/bin ]; then
+  export PATH=$PATH:$GOPATH/bin
+elif [ -d $WORKDIR/mygo ]; then
   export GOPATH=$WORKDIR/mygo
-  export GOBIN=$GOPATH/bin
-  export PATH=$PATH:$GOBIN
+  export PATH=$PATH:$GOPATH/bin
 fi
 
 # nvm - nodejs version control 
@@ -183,7 +181,7 @@ fi
 
 NPMRC=~/.npmrc
 if [ -f $NPMRC ]; then
-  export NPM_TOKEN=`cat $NPMRC | sed 's/^.*authToken=\([0-9a-z\-]*\)/\1/' | head -n 1`
+  export NPM_TOKEN=`cat ~/.npmrc | grep authToken | sed 's/^.*authToken=\([0-9a-z\-]*\)/\1/'`
 fi
 
 # gvm
