@@ -184,6 +184,12 @@ if [ -f $NPMRC ]; then
   export NPM_TOKEN=`cat ~/.npmrc | grep authToken | sed 's/^.*authToken=\([0-9a-z\-]*\)/\1/'`
 fi
 
+#deno
+DENO=$HOME/.deno/bin
+if [ -d $DENO ]; then
+  export PATH=$DENO:$PATH
+fi
+
 # gvm
 GVM=$HOME/.gvm/scripts/gvm
 if [ -f $GVM ]; then
@@ -213,8 +219,8 @@ fi
 if [ -d $HOME/.pyenv ]; then
   export PYENV_ROOT="$HOME/.pyenv"
   export PATH="$PYENV_ROOT/bin:$PATH"
-  eval "$(pyenv init -)"
-  eval "$(pyenv virtualenv-init -)"
+#  eval "$(pyenv init -)"
+#  eval "$(pyenv virtualenv-init -)"
 fi
 
 ### Added by the Heroku Toolbelt
@@ -225,3 +231,11 @@ fi
 if [ -d $HOME/.yarn/bin ]; then
   export PATH="$HOME/.yarn/bin:$PATH"
 fi
+
+### tools
+ipgroup () {
+  rg -N -o -w '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+' $@ | sort | uniq -c | sort -n
+}
+
+# heroku autocomplete setup
+HEROKU_AC_BASH_SETUP_PATH=/Users/sylee/Library/Caches/heroku/autocomplete/bash_setup && test -f $HEROKU_AC_BASH_SETUP_PATH && source $HEROKU_AC_BASH_SETUP_PATH;
