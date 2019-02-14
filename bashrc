@@ -225,3 +225,8 @@ fi
 if [ -d $HOME/.yarn/bin ]; then
   export PATH="$HOME/.yarn/bin:$PATH"
 fi
+
+### tools
+ipgroup () {
+  rg -N -o -w '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+' $@ | sort | uniq -c | sort -n
+}
