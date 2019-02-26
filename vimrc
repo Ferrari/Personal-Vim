@@ -64,9 +64,15 @@
         Plug 'ingydotnet/yaml-vim'
 
     " setup deoplete
-        Plug 'Shougo/deoplete.nvim'
-        Plug 'roxma/nvim-yarp'
-        Plug 'roxma/vim-hug-neovim-rpc'
+        if has('nvim')
+          Plug 'Shougo/deoplete.nvim'
+        else
+          Plug 'Shougo/deoplete.nvim'
+          Plug 'roxma/nvim-yarp'
+          Plug 'roxma/vim-hug-neovim-rpc'
+        endif
+        let g:deoplete#enable_at_startup = 1
+        let g:deoplete#enable_yarp = 1
 " }
 
 " Initialize plugin {
@@ -74,10 +80,6 @@
 " }
 
 " Plugins {
-
-    " use deoplete
-    let g:deoplete#enable_at_startup = 1
-    let g:deoplete#enable_yarp = 1
 
     "ycm
     "let g:ycm_filetype_specific_completion_to_disable = {'javascript': 1}
