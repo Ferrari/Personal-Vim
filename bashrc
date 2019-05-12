@@ -164,10 +164,12 @@ if [ -f $WIN_Z ];then
   . $WIN_Z
 fi
 # Go
-if [ -d $HOME/mygo ] && [ -d $HOME/mygo/bin ]; then
-    export GOPATH=$HOME/mygo
-    export GOBIN=$GOPATH/bin
-    export PATH=$PATH:$GOBIN
+if [ -d $HOME/mygo ]; then
+  export GOPATH=$HOME/mygo
+  export PATH=$PATH:$GOPATH/bin
+elif [ -d $WORKDIR/mygo ]; then
+  export GOPATH=$WORKDIR/mygo
+  export PATH=$PATH:$GOPATH/bin
 fi
 
 # nvm - nodejs version control 
@@ -176,9 +178,34 @@ if [ -d $NVM_DIR ]; then
 	source $NVM_DIR/nvm.sh
     source $NVM_DIR/bash_completion
 fi
+if [ -s "$NVM_DIR/bash_completion" ]; then
+  source "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+fi
+
 NPMRC=~/.npmrc
 if [ -f $NPMRC ]; then
-    export NPM_TOKEN=`cat $NPMRC | sed 's/^.*authToken=\([0-9a-z\-]*\)/\1/' | head -n 1`
+  export NPM_TOKEN=`cat ~/.npmrc | grep authToken | sed 's/^.*authToken=\([0-9a-z\-]*\)/\1/'`
+fi
+
+#deno
+DENO=$HOME/.deno/bin
+if [ -d $DENO ]; then
+  export PATH=$DENO:$PATH
+fi
+
+# gvm
+GVM=$HOME/.gvm/scripts/gvm
+if [ -f $GVM ]; then
+  source $GVM
+fi
+
+# rustup
+RUSTUP=$HOME/.cargo/env
+if [ -f $RUSTUP ]; then
+  source $RUSTUP
+fi
+if [ -d $HOME/.cargo/bin ]; then
+  export PATH="$HOME/.cargo/bin:$PATH"
 fi
 
 ## Useful Tools
@@ -199,8 +226,8 @@ fi
 if [ -d $HOME/.pyenv ]; then
   export PYENV_ROOT="$HOME/.pyenv"
   export PATH="$PYENV_ROOT/bin:$PATH"
-  eval "$(pyenv init -)"
-  eval "$(pyenv virtualenv-init -)"
+#  eval "$(pyenv init -)"
+#  eval "$(pyenv virtualenv-init -)"
 fi
 
 ### Added by the Heroku Toolbelt
@@ -211,3 +238,9 @@ fi
 if [ -d $HOME/.yarn/bin ]; then
     export PATH="$HOME/.yarn/bin:$PATH"
 fi
+
+### tools
+ipgroup () {
+  rg -N -o -w '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+' $@ | sort | uniq -c | sort -n
+}
+

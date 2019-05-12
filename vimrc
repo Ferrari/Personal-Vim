@@ -10,7 +10,7 @@
 
 " Plugs {
     " Deps 
-        Plug 'gmarik/vundle'
+        "Plug 'gmarik/vundle'
         Plug 'mileszs/ack.vim'
         Plug 'ctrlpvim/ctrlp.vim'
     
@@ -36,7 +36,6 @@
         Plug 'motemen/git-vim'
         Plug 'airblade/vim-gitgutter'
         "Plug 'Valloric/YouCompleteMe'
-        "Plug 'Shougo/neocomplete.vim'
         Plug 'Raimondi/delimitMate'
         Plug 'vim-scripts/matchit.zip'
         Plug 'MarcWeber/vim-addon-mw-utils'
@@ -44,7 +43,7 @@
     
     " Javascr'pt/CSS
         Plug 'wavded/vim-stylus'
-        Plug 'marijnh/tern_for_vim'
+        "Plug 'marijnh/tern_for_vim'
         Plug 'mattn/emmet-vim'
         Plug 'ap/vim-css-color'
         Plug 'hail2u/vim-css3-syntax'
@@ -65,13 +64,15 @@
         Plug 'ingydotnet/yaml-vim'
 
     " setup deoplete
-    if has('nvim')
-      Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-    else
-      Plug 'Shougo/deoplete.nvim'
-      Plug 'roxma/nvim-yarp'
-      Plug 'roxma/vim-hug-neovim-rpc'
-    endif
+        if has('nvim')
+          Plug 'Shougo/deoplete.nvim'
+        else
+          Plug 'Shougo/deoplete.nvim'
+          Plug 'roxma/nvim-yarp'
+          Plug 'roxma/vim-hug-neovim-rpc'
+        endif
+        let g:deoplete#enable_at_startup = 1
+        let g:deoplete#enable_yarp = 1
 " }
 
 " Initialize plugin {
@@ -79,10 +80,6 @@
 " }
 
 " Plugins {
-
-    " use deoplete
-    let g:deoplete#enable_at_startup = 1
-    let g:deoplete#enable_yarp = 1
 
     "ycm
     "let g:ycm_filetype_specific_completion_to_disable = {'javascript': 1}
@@ -205,8 +202,8 @@
     let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
     " ack
-    if executable('ag')
-        let g:ackprg = 'ag --vimgrep'
+    if executable('rg')
+        let g:ackprg = 'rg --vimgrep'
     endif
 " }
 
@@ -265,6 +262,11 @@ set expandtab
     autocmd FileType python set sts=4
     autocmd FileType python set textwidth=80
 
+    " rust
+    autocmd FileType rust set sw=2
+    autocmd FileType rust set ts=2
+    autocmd FileType rust set sts=2
+    autocmd FileType rust set textwidth=0
 " }
 
 " editor setting

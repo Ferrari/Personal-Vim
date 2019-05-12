@@ -2,8 +2,10 @@
 
 endpath="$HOME/.ferrari"
 backuppath="$endpath/bak"
-autopath="$endpath/.vim/autoload"
+autopath="$HOME/.vim/autoload"
+alacritty_config_path="$HOME/.config/alacritty"
 checkfiles=('.vim' '.vimrc' '.gvimrc' '.bashrc' '.tmux-conf')
+necessary_font="SFMono"
 
 msg() {
   printf '%b\n' "$1" >&2
@@ -48,6 +50,14 @@ create_symlinks() {
   success "$1"
 }
 
+check_font_exist() {
+  if [[ $(fc-lis $necessary_font) ]]; then
+    echo 'Pass necessary font checker'
+  else
+    echo "Missing required font $necessary_font"
+  fi
+}
+
 # Setup Directory
 msg "Setup personal dotfiles..."
 git clone --recursive https://github.com/Ferrari/dotfiles.git $endpath
@@ -75,3 +85,17 @@ vim +PlugInstall! +PlugClean! +q
 
 # setup tpm
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+# setup nvm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.10/install.sh | bash
+
+# setup rust
+curl https://sh.rustup.rs -sSf | sh
+
+# if alacritty exist then copy its config file
+# check necessary font
+if [ -d $alacritty_config_path ]; then
+  lnif "$endpath/alacritty.yml" "$alacritty_config_path/alacritty.yml"
+
+  check_font_exist
+fi
