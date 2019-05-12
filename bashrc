@@ -155,51 +155,44 @@ function openGithub {
 alias ghopen="openGithub"
 
 ## Programming Tools
-Z_DIR=~/Resources/z
+Z_DIR=~/Programming/resources/z
 if [ -f $Z_DIR/z.sh ]; then
 	. $Z_DIR/z.sh
 fi
-
+WIN_Z=/home/linuxbrew/.linuxbrew/etc/profile.d/z.sh
+if [ -f $WIN_Z ];then
+  . $WIN_Z
+fi
 # Go
 if [ -d $HOME/mygo ] && [ -d $HOME/mygo/bin ]; then
-  export GOPATH=$HOME/mygo
-  export GOBIN=$GOPATH/bin
-  export PATH=$PATH:$GOBIN
-elif [ -d $WORKDIR/mygo ] && [ -d $WORKDIR/mygo/bin ]; then
-  export GOPATH=$WORKDIR/mygo
-  export GOBIN=$GOPATH/bin
-  export PATH=$PATH:$GOBIN
+    export GOPATH=$HOME/mygo
+    export GOBIN=$GOPATH/bin
+    export PATH=$PATH:$GOBIN
 fi
 
 # nvm - nodejs version control 
-export NVM_DIR="$HOME/.nvm"
-export NVM_FILE="$NVM_DIR/nvm.sh"
-if [ -f $NVM_FILE ]; then
-	source $NVM_FILE
+NVM_DIR=$HOME/.nvm
+if [ -d $NVM_DIR ]; then
+	source $NVM_DIR/nvm.sh
+    source $NVM_DIR/bash_completion
 fi
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 NPMRC=~/.npmrc
 if [ -f $NPMRC ]; then
-  export NPM_TOKEN=`cat $NPMRC | sed 's/^.*authToken=\([0-9a-z\-]*\)/\1/' | head -n 1`
-fi
-
-# rustup
-RUSTUP=$HOME/.cargo/env
-if [ -f $RUSTUP ]; then
-  source $RUSTUP
-fi
-if [ -d $HOME/.cargo/bin ]; then
-  export PATH="$HOME/.cargo/bin:$PATH"
+    export NPM_TOKEN=`cat $NPMRC | sed 's/^.*authToken=\([0-9a-z\-]*\)/\1/' | head -n 1`
 fi
 
 ## Useful Tools
-PERSONAL_DIR=~/Resources
+PERSONAL_DIR=~/Programming/resources
 if [ -d $PERSONAL_DIR ]; then
     export PATH="$PATH":"$PERSONAL_DIR"
 fi
-Z_FILE=/usr/local/etc/profile.d/z.sh
-if [ -f $Z_FILE ]; then
-  source $Z_FILE
+
+## Setup path for google development
+## depot_tools for chrome 
+## appengine for appengine
+DEP_DIR=~/Programming/resources/depot_tools
+if [ -d $DEP_DIR ]; then
+	export PATH="$PATH":"$DEP_DIR"
 fi
 
 ## python setting
@@ -216,5 +209,5 @@ if [ -d /usr/local/heroku/bin ]; then
 fi
 
 if [ -d $HOME/.yarn/bin ]; then
-  export PATH="$HOME/.yarn/bin:$PATH"
+    export PATH="$HOME/.yarn/bin:$PATH"
 fi
