@@ -155,9 +155,9 @@ function openGithub {
 alias ghopen="openGithub"
 
 ## Programming Tools
-Z_DIR=~/Programming/resources/z
-if [ -f $Z_DIR/z.sh ]; then
-	. $Z_DIR/z.sh
+Z_FILE=/usr/local/etc/profile.d/z.sh
+if [ -f $Z_FILE ]; then
+	. $Z_FILE
 fi
 WIN_Z=/home/linuxbrew/.linuxbrew/etc/profile.d/z.sh
 if [ -f $WIN_Z ];then
