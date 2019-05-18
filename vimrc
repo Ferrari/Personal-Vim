@@ -54,7 +54,7 @@
               \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss'] }
 
     " GO
-        Plug 'fatih/vim-go'
+        Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
     
     " Rust
         Plug 'rust-lang/rust.vim'
@@ -63,16 +63,19 @@
     " Others
         Plug 'ingydotnet/yaml-vim'
 
+    " coc
+        Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+
     " setup deoplete
-        if has('nvim')
-          Plug 'Shougo/deoplete.nvim'
-        else
-          Plug 'Shougo/deoplete.nvim'
-          Plug 'roxma/nvim-yarp'
-          Plug 'roxma/vim-hug-neovim-rpc'
-        endif
-        let g:deoplete#enable_at_startup = 1
-        let g:deoplete#enable_yarp = 1
+    "    if has('nvim')
+    "      Plug 'Shougo/deoplete.nvim', { 'do', ':UpdateRemotePlugins' }
+    "    else
+    "      Plug 'Shougo/deoplete.nvim'
+    "      Plug 'roxma/nvim-yarp'
+    "      Plug 'roxma/vim-hug-neovim-rpc'
+    "    endif
+    "    let g:deoplete#enable_at_startup = 1
+    "    let g:deoplete#enable_yarp = 1
 " }
 
 " Initialize plugin {
