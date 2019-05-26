@@ -187,12 +187,6 @@ if [ -f $NPMRC ]; then
   export NPM_TOKEN=`cat ~/.npmrc | grep authToken | sed 's/^.*authToken=\([0-9a-z\-]*\)/\1/'`
 fi
 
-#deno
-DENO=$HOME/.deno/bin
-if [ -d $DENO ]; then
-  export PATH=$DENO:$PATH
-fi
-
 # gvm
 GVM=$HOME/.gvm/scripts/gvm
 if [ -f $GVM ]; then
