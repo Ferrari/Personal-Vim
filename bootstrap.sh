@@ -99,3 +99,10 @@ if [ -d $alacritty_config_path ]; then
 
   check_font_exist
 fi
+
+# Personal necessary toolkit
+# Setup z for quick jump
+if [ ! -d "$HOME/resources" ]; then
+  mkdir -p $HOME/resources
+  git clone https://github.com/rupa/z.git $HOME/resources/z
+fi

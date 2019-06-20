@@ -163,6 +163,10 @@ WIN_Z=/home/linuxbrew/.linuxbrew/etc/profile.d/z.sh
 if [ -f $WIN_Z ];then
   . $WIN_Z
 fi
+SERVER_Z=$HOME/resources/z/z.sh
+if [ -f $SERVER_Z ]; then
+  . $SERVER_Z
+fi
 # Go
 if [ -d $HOME/mygo ]; then
   export GOPATH=$HOME/mygo
