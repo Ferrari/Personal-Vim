@@ -168,12 +168,19 @@ if [ -f $SERVER_Z ]; then
   . $SERVER_Z
 fi
 # Go
+export GO111MODULE=auto
 if [ -d $HOME/mygo ]; then
   export GOPATH=$HOME/mygo
   export PATH=$PATH:$GOPATH/bin
 elif [ -d $WORKDIR/mygo ]; then
   export GOPATH=$WORKDIR/mygo
   export PATH=$PATH:$GOPATH/bin
+elif [ -d $HOME/go ]; then
+  export GOPATH=$HOME/go
+  export PATH=$PATH:$GOPATH/bin
+fi
+if [ -d /snap/go/current ]; then
+  export GOROOT=/snap/go/current
 fi
 
 # nvm - nodejs version control 

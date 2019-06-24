@@ -54,7 +54,9 @@
               \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss'] }
 
     " GO
-        Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+        Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'tag': '*' }
+        Plug 'dgryski/vim-godef'
+
     
     " Rust
         Plug 'rust-lang/rust.vim'
@@ -158,9 +160,22 @@
       nmap <F8> :TagbarToggle<CR>
 
     " vim-go
-      let g:go_fmt_autosave = 1
       let g:go_fmt_command = "goimports"
-      let g:go_disable_autoinstall = 0
+      let g:go_autodetect_gopath = 1
+      let g:go_list_type = "quickfix"
+
+      let g:go_version_warning = 1
+      let g:go_highlight_types = 1
+      let g:go_highlight_fields = 1
+      let g:go_highlight_functions = 1
+      let g:go_highlight_function_calls = 1
+      let g:go_highlight_operators = 1
+      let g:go_highlight_extra_types = 1
+      let g:go_highlight_methods = 1
+      let g:go_highlight_generate_tags = 1
+
+      let g:godef_split=2
+
     
     " gotags
     " https://github.com/jstemmer/gotags
