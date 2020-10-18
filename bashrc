@@ -185,12 +185,16 @@ fi
 
 # nvm - nodejs version control 
 NVM_DIR=$HOME/.nvm
-if [ -d $NVM_DIR ]; then
+if [ -s "/usr/local/opt/nvm/nvm.sh" ]; then
+  source "/usr/local/opt/nvm/nvm.sh"
+elif [ -d $NVM_DIR ]; then
 	source $NVM_DIR/nvm.sh
-    source $NVM_DIR/bash_completion
+  source $NVM_DIR/bash_completion
 fi
 if [ -s "$NVM_DIR/bash_completion" ]; then
   source "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+elif [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ]; then
+  source "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
 fi
 
 NPMRC=~/.npmrc
