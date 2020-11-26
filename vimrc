@@ -66,7 +66,7 @@
         Plug 'ingydotnet/yaml-vim'
 
     " coc
-        Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+        Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
     " setup deoplete
     "    if has('nvim')
