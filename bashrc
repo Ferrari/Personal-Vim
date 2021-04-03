@@ -141,6 +141,9 @@ if [ $OS == "Darwin" ]; then
     if [ -d /usr/local/bin ]; then
         export PATH=/usr/local/bin:"$PATH"
     fi
+    if [ -d /opt/homebrew/bin ]; then
+        export PATH=/opt/homebrew/bin:"$PATH"
+    fi
     export CLICOLOR=1
     export EVENT_NOKQUEUE=1
 fi
@@ -158,6 +161,8 @@ alias ghopen="openGithub"
 Z_FILE=/usr/local/etc/profile.d/z.sh
 if [ -f $Z_FILE ]; then
 	. $Z_FILE
+elif [ -f "/opt/homebrew/etc/profile.d/z.sh" ]; then
+  . "/opt/homebrew/etc/profile.d/z.sh"
 fi
 WIN_Z=/home/linuxbrew/.linuxbrew/etc/profile.d/z.sh
 if [ -f $WIN_Z ];then
@@ -187,6 +192,8 @@ fi
 NVM_DIR=$HOME/.nvm
 if [ -s "/usr/local/opt/nvm/nvm.sh" ]; then
   source "/usr/local/opt/nvm/nvm.sh"
+elif [ -s "/opt/homebrew/opt/nvm/nvm.sh" ]; then
+  source "/opt/homebrew/opt/nvm/nvm.sh"
 elif [ -d $NVM_DIR ]; then
 	source $NVM_DIR/nvm.sh
   source $NVM_DIR/bash_completion
